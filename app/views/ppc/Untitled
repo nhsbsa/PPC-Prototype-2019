@@ -1,0 +1,31 @@
+function startdatefunction() {
+    if(document.getElementById("today").checked) {
+        document.getElementById("todayday").disabled = false;
+        document.getElementById("todaymonth").disabled = false;
+        document.getElementById("todayyear").disabled = false;
+    } else {
+        document.getElementById("todayday").disabled = true;
+        document.getElementById("todaymonth").disabled = true;
+        document.getElementById("todayyear").disabled = true;
+    }
+
+    if(document.getElementById("future_date").checked) {
+        document.getElementById("futureday").disabled = false;
+        document.getElementById("futuremonth").disabled = false;
+        document.getElementById("futureyear").disabled = false;
+    } else {
+        document.getElementById("futureday").disabled = true;
+        document.getElementById("futuremonth").disabled = true;
+        document.getElementById("futureyear").disabled = true;
+    }
+
+    if(document.getElementById("past_date").checked) {
+        document.getElementById("pastday").disabled = false;
+        document.getElementById("pastmonth").disabled = false;
+        document.getElementById("pastyear").disabled = false;
+    } else {
+        document.getElementById("pastday").disabled = true;
+        document.getElementById("pastmonth").disabled = true;
+        document.getElementById("pastyear").disabled = true;
+    }
+}

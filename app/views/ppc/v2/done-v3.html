@@ -1,0 +1,91 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  You have prepaid for {{duration}} of prescriptions. - Buy an NHS Prescription Prepayment Certificate
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+
+
+    <div class="column-two-thirds">
+
+      <div class="done-panel">
+        <h1 class="heading-large"><span id="done-tick"> </span>Done</h1>
+        <div id="oneoff_done">
+        <h2 class="heading-medium">You have prepaid for {{duration}} months of prescriptions.</h2>
+      </div>
+        <div id="dd_done">
+          <h2 class="heading-medium">We have setup a Direct Debit payment for 12 months of prescriptions</h3>
+        </div>
+      </div>
+
+      <h3 class="heading-medium">You won't receive a certificate in the post - keep your details safe.​</h3>
+
+      <p>If a pharmacist asks for evidence that you have prepaid, you must show them the following details:</p>
+
+      <div class="info-table">
+        <p>Certificate for: <span class="strong">{{name}}</span></p>
+        <p>Certificate number: <span class="strong">869 467 589</span></p>
+        <p>Starts on: <span class="strong">{{startdate}}</span></p>
+        <p>Ends on: <span class="strong">{{enddate}}</span></p>
+      </div>
+
+      <p>
+       We have sent the following certificate details to <span class="bold-small">{{ data.email }}</span> and <span class="bold-small">{{ data.mobile }}</span> You can also print this page or write down your details.
+      </p>
+
+      <h2 class="heading-medium">Print this page</h2>
+
+      <ul class="list options-list">
+        <li><a class="icon print-icon" href="javascript:window.print();">Print this page</a></li>
+        <!-- <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this page (PDF 55k)</a></li> -->
+      </ul>
+
+
+      <div id="dd_content">
+        <h3 class="heading-medium">Your Direct Debit</h3>
+        <p>
+          We have set up a Direct Debit payment for you. You will receive a letter confirming this and including your mandate. Our name on your bank statement will be NHSBSA.
+        </p>
+      </div>
+
+     <h3 class="heading-medium">Collecting prescriptions</h3>
+
+     <p>
+       Tick box 'F' on the back of your prescription.
+     </p>
+
+     <p>
+       Pharmacy staff ask for prepayment details. If you do not have them with you, they tick 'Evidence not seen' on the prescription. They will not charge you.
+     </p>
+
+     <p>
+       We prevent fraud by matching prepayment details on our database with prescriptions.
+     </p>
+
+    </div>
+
+<div class="column-two-thirds">
+    <a class="button" href="feedback">Finished</a>
+  </p>
+  <p>Selecting finished will take you to a short survey. Your feedback will help us to improve this service. You don’t have to complete this if you don’t want to.</p>
+  <p>
+
+  <h4 class="heading-small">Contact us</h4>
+  <p>
+    <a href="#">Contact us</a> if you have any queries about your prescription prepayment certificate.
+  </p>
+
+  <p id="has_dd"class="visually-hidden">{{dd}}</p>
+  <p id="3month"class="visually-hidden">{{durtion}}</p>
+</div>
+
+
+</main>
+
+{% endblock %}
