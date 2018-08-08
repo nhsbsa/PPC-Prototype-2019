@@ -1,0 +1,104 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+PPC Prototypes
+{% endblock %}
+
+{% block content %}
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    cellpadding: 20px;
+}
+
+</style>
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+
+        <h1 class="heading-xlarge">
+          Change log
+        </h1>
+
+
+        <h3 class="heading-medium">Version 2</h3>
+                <table>
+          <tr>
+            <th width="15%"><span class="heading-small">Page</span></th>
+            <th><span class="heading-small">Change</span></th>
+          </tr>
+          <tr>
+            <td>/find-address</td>
+            <td>“Find address” button removed, instead “Next” button performs find address function and links to list of addresses found. </td>
+          </tr>
+          <tr>
+            <td>/address-list</td>
+            <td><ul class="list list-bullet"><li>Changed from each address acting as a link to each address having a radio button and a “Next” button to submit choice.</li>
+              <li>“Address not listed” link added to send users to manual address entry. Rather than having to go back in browser and use the link on find address page.</li>
+            <li>Text formatting changed to align more with gov.</td></li></td>
+          </tr>
+          <tr>
+            <td>What is your address</td>
+            <td>This page has been removed.<br>Instead users go straight from selecting address from list to NHS no question. Rather than first going to a page containing their chosen address pre-populated in input fields.</td>
+          </tr>
+          <tr>
+            <td>/duration and /payment-type</td>
+            <td>Split into two separate question pages. Users are first asked to choose a duration of 3 or 12 months. If 12 months is chosen, the next page will ask if they wish to pay by direct debit or card payment. If 3 months chosen they skip to the next question as only card payment available.</td>
+          </tr>
+          <tr>
+            <td>/copy</td>
+            <td>Checkboxes for email/mobile/no contact changed to two radio buttons. First radio button gives choice to be contacted by email and/or mobile and reveals input fields. Second radio button gives choice for no contact.</td>
+          </tr>
+        </table>
+
+
+<h3 class="heading-medium">Version 1 (updating mvp-ppc-prototype to match beta)</h3>
+        <table>
+  <tr>
+    <th width="15%"><span class="heading-small">Page</span></th>
+    <th><span class="heading-small">Change</span></th>
+  </tr>
+  <tr>
+    <td>/start</td>
+    <td>Content added: “Other ways to buy” section added at bottom of page.</td>
+  </tr>
+  <tr>
+    <td>/name</td>
+    <td>Content added: “Do not include any middle names.” added.</td>
+  </tr>
+  <tr>
+    <td>/nhsno</td>
+    <td><ul class="list list-bullet"><li>Content removed: “You can usually find this on your prescriptions.”</li>
+      <li>Content added: “Where to find your NHS number” section.</li>
+    </ul></td>
+  </tr>
+  <tr>
+    <td>/copy</td>
+    <td><ul class="list list-bullet"><li>Content removed: “we will send your prepayment certificate straight away…”</li>
+    <li>Content added: “We can send your prepayment certificate…” section</li>
+    <li>Phrasing of option to write down details changed to “I will write down or print my certificate details”.</li>
+  </ul></td>
+  <tr>
+    <td>done</td>
+    <td><ul class="list list-bullet"><li>Content removed: “Reminders” section.</li>
+        <li>Content added: “Contact us” link.</li></ul></td>
+</tr>
+  <tr>
+    <td>Direct Debit route change</td>
+    <td>Some of the Direct Debit pages were missing from the DD route on the prototype.<br>
+      Updated route to the following to match beta:<br>
+      Check you answers page > Enter DD details > Check DD details > DD declaration > Done page
+    </td>
+  </tr>
+</table>
+
+
+  </div>
+
+
+
+</main>
+
+{% endblock %}
