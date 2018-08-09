@@ -1,0 +1,74 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+PPC Prototypes
+{% endblock %}
+
+{% block content %}
+
+<head>
+<meta charset="utf-8" />
+<title>
+Manage your submissions
+</title>
+
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/govuk-template.css" media="screen" rel="stylesheet" /><!--<![endif]-->
+<!--[if IE 6]><link href="/public/stylesheets/govuk-template-ie6.css" media="screen" rel="stylesheet" /><![endif]-->
+<!--[if IE 7]><link href="/public/stylesheets/govuk-template-ie7.css" media="screen" rel="stylesheet" /><![endif]-->
+<!--[if IE 8]><link href="/public/stylesheets/govuk-template-ie8.css" media="screen" rel="stylesheet" /><![endif]-->
+<link href="/public/stylesheets/govuk-template-print.css" media="print" rel="stylesheet" />
+
+<!--[if IE 8]><link href="/public/stylesheets/fonts-ie8.css" media="all" rel="stylesheet" /><![endif]-->
+<!--[if gte IE 9]><!--><link href="/public/stylesheets/fonts.css" media="all" rel="stylesheet" /><!--<![endif]-->
+<!--[if lt IE 9]><script src="/public/javascripts/ie.js"></script><![endif]-->
+
+<link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" />
+<link rel="mask-icon" href="/public/images/gov.uk_logotype_crown.svg" color="#0b0c0c">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/public/images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/public/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/public/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" href="/public/images/apple-touch-icon-60x60.png">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:image" content="/public/images/opengraph-image.png">
+
+
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/elements-page.css"  rel="stylesheet" type="text/css"><!--<![endif]-->
+<!--[if IE 6]><link href="/public/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 7]><link href="/public/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 8]><link href="/public/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+<link href="/public/stylesheets/vendor/prism.css" media="screen" rel="stylesheet">
+
+<!--[if gt IE 8]><!--><script src="/public/javascripts/vendor/prism.js"></script><!--<![endif]-->
+</head>
+
+
+<main>
+
+<div class="grid-row">
+   <div class="column-full">
+     <div class="appstatus" role="alert">
+       <h1 class="appstatus-title">Submission sent</h1>
+       <ol class="appstatus-steps">
+          <li>
+             <span class="appstatus-complete">Paper prescriptions
+             <img alt="Complete" title="Complete" src="../public/images/icon-complete.png">
+             </span>
+          </li>
+          <li><span class="appstatus-complete">Eps prescriptions
+             <img alt="Complete" title="Complete" src="../public/images/icon-complete.png"></span>
+          </li>
+          <li><span class="appstatus-complete">Other activities
+             <img alt="Complete" title="Complete" src="../public/images/icon-complete.png"></span>
+          </li>
+          <li><span class="appstatus-complete">Declaration
+             <img alt="Complete" title="Complete" src="../public/images/icon-complete.png"></span>
+          </li>
+       </ol>
+       <a href="https://nhsdpr.herokuapp.com/dsr/sprint14/login/dashboard/" class="link-back-white">Return to dashboard</a>
+    </div>
+ </div>
+</div
+
+{% endblock %}

@@ -14,7 +14,7 @@ module.exports = router
 
 
 //Contact handler (shows email or mobile pages if these have been selected)
-router.get('/contact-handler', function (req, res) {
+router.get('/v1-contact-handler', function (req, res) {
   if (req.query.contact_by_email === 'true') {
     res.redirect('ppc/v1/email-address');
   } else if (req.query.contact_by_mobile === 'true') {

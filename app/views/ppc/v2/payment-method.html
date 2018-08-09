@@ -30,9 +30,14 @@ How long do you want your prepayment certificate to last? - Buy an NHS Prescript
          <label for="card_payment_12">One-off payment (<span class="strong">£104</span>)</label>
        </div>
 
-       <div class="multiple-choice">
+       <div class="multiple-choice" data-target="ddinfo">
          <input id="direct_debit_radio" type="radio" name="payment_type" value="10 installments of £10.40 by Direct Debit">
          <label for="direct_debit_radio">Direct debit (10 monthly installments of <span class="strong">£10.40</span>) </label>
+       </div>
+
+       <div class="panel panel-border-narrow js-hidden" id="ddinfo">
+         <p>Your first installment will be taken on 17/08/2018. After that you can call us to change the payment date.<br><br>
+           Your prepayment will automatically renew in 12 months.</p>
        </div>
 
        <div class="form-group">
