@@ -20,17 +20,17 @@
     <table class="check-table">
       <tr>
         <td width="45%">Card number</td>
-        <td>{{ data.cardnumber }}</td>
+        <td><span class="strong">{{ data.cardnumber }}</span></td>
         <td width="8%"><a href="card-details">Change</a></td>
       </tr>
       <tr>
         <td>Expiry date</td>
-        <td>{{ data.exmonth }}/{{ data.exyear }}</td>
+        <td><span class="strong">{{ data.exmonth }}/{{ data.exyear }}</span></td>
         <td><a href="card-details">Change</a></td>
       </tr>
       <tr>
         <td>Name on card</td>
-        <td>{{ data.holdername }}</td>
+        <td><span class="strong">{{ data.holdername }}</span></td>
         <td><a href="card-details">Change</a></td>
       </tr>
 <!--
@@ -42,12 +42,12 @@
 -->
       <tr>
         <td>Payment of</td>
-        <td>{{cardpaymentinfo}}</td>
+        <td><span class="strong">{{ data.duration }} month prescription prepayment</span></td>
         <td><a href="">Change</a></td>
       </tr>
       <tr>
         <td>Amount to pay</td>
-        <td>{{ data.total_cost }}</td>
+        <td><span class="strong">{{ data.total_cost }}</span></td>
         <td><a href="">Change</a></td>
       </tr>
     </table>
