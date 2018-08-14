@@ -27,12 +27,13 @@ router.get('/v1-contact-handler', function (req, res) {
 
 
 //Check your answers handler (sends down either dd or card payment route) ! doesn't work currently !
+
 router.get('/v1-check-handler', function (req, res) {
-  if (req.query.payment_type === '10 installments of £10.40 by Direct Debit') {
-    res.redirect('ppc/v1/ddpay');
-  } else {
-    res.redirect('ppc/v1/card-details');
-  }
+  if (req.query.payment_type === '10 installments of £10.40 by Direct Debit'){
+  res.redirect('ppc/v1/ddpay');
+} else{
+  res.redirect('ppc/v1/card-details');
+}
 });
 
 
@@ -46,6 +47,8 @@ router.get('/v2-duration-handler', function (req, res) {
   res.redirect('ppc/v2/start-date');
 }
 });
+
+// Check handler (sends down either dd or card payment route)
 
 router.get('/v2-check-handler', function (req, res) {
   if (req.query.payment_type === '10 installments of £10.40 by Direct Debit'){
