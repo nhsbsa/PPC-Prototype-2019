@@ -37,7 +37,7 @@ router.get('/v1-check-handler', function (req, res) {
 });
 
 
-// ** exclusive v2 routes **
+// ** exclusive v2 routes ** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // Duration handler (shows page to select payment type if 12 months selected) <-- works
 router.get('/v2-duration-handler', function (req, res) {
@@ -48,6 +48,7 @@ router.get('/v2-duration-handler', function (req, res) {
 }
 });
 
+
 // Check handler (sends down either dd or card payment route)
 
 router.get('/v2-check-handler', function (req, res) {
@@ -55,5 +56,24 @@ router.get('/v2-check-handler', function (req, res) {
   res.redirect('ppc/v2/ddpay');
 } else{
   res.redirect('ppc/v2/card-details');
+}
+});
+
+// V3 EXCLUSIVE ROUTES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Duration handler (shows page to select payment type if 12 months selected) <-- works
+router.get('/v3-duration-handler', function (req, res) {
+  if (req.query.duration === '12'){
+  res.redirect('ppc/v3/payment-method');
+} else{
+  res.redirect('ppc/v3/start-date-test');
+}
+});
+
+router.get('/v3-check-handler', function (req, res) {
+  if (req.query.payment_type === '10 installments of £10.40 by Direct Debit'){
+  res.redirect('ppc/v3/ddpay');
+} else{
+  res.redirect('ppc/v3/card-details');
 }
 });
