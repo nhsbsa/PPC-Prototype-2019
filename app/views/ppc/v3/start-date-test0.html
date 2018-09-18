@@ -1,0 +1,121 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+When do you want your prepayment certificate to start? - Buy an NHS Prescription Prepayment Certificate
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <div class="heading-group">
+      <p>Buy an NHS Prescription Prepayment Certificate </p>
+        <h1 class="heading-large">
+            When do you want your prepayment certificate to start?
+        </h1>
+      </div>
+
+      <p>
+        You can choose any day to start your prepayment certificate between 17 August 2018 and 17 October 2018.
+      </p>
+
+      <form class="form" action="copy" method="get">
+        <div class="form-group">
+          <fieldset>
+
+
+            <div class="multiple-choice" data-target="current-certificate">
+              <input id="future_date" type="radio" name="start_date_choice" value="future" >
+              <label class="single-line" for="next">To carry on from my current certificate</label>
+            </div>
+  <div class="panel panel-border-narrow js-hidden" id="current-certificate">
+            <p><span class="strong">What is the expiry date of your current certificate?</span></p>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label for="futureday">Day</label>
+                  <input class="form-control" id="futureday" name="future_day" type="number" pattern="[0-9]*" min="0" max="31" >
+                </div>
+                <div class="form-group form-group-month">
+                  <label for="futuremonth">Month</label>
+                  <input class="form-control" id="futuremonth" name="future_month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label for="futureyear">Year</label>
+                  <input class="form-control" id="futureyear" name="future_year" type="number" pattern="[0-9]*" min="0" max="2018">
+                </div>
+              </div>
+            </div>
+
+            <div class="multiple-choice" data-target="next-prescription">
+              <input id="future_date" type="radio" name="start_date_choice" value="future" >
+              <label class="single-line" for="next">To cover prescriptions I'll collect today or later</label>
+            </div>
+  <div class="panel panel-border-narrow js-hidden" id="next-prescription">
+            <p>Choose the date you will collect your next prescription to get the most out of your certificate.<br><br>
+            If you already have a certificate, choose a date after this expires.</p>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label for="futureday">Day</label>
+                  <input class="form-control" id="futureday" name="future_day" type="number" pattern="[0-9]*" min="0" max="31" >
+                </div>
+                <div class="form-group form-group-month">
+                  <label for="futuremonth">Month</label>
+                  <input class="form-control" id="futuremonth" name="future_month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label for="futureyear">Year</label>
+                  <input class="form-control" id="futureyear" name="future_year" type="number" pattern="[0-9]*" min="0" max="2018">
+                </div>
+              </div>
+            </div>
+
+            <div class="multiple-choice" data-target="start_date_earlier">
+              <input id="past_date" type="radio" name="start_date_choice" value="past">
+              <label class="single-line" for="already">I want to backdate my certificate - I have collected my prescription before today</label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="start_date_earlier">
+              <p>Choose the date you collected your prescription.<br><br>
+              You can only claim a refund if you were given a form on the day you collected the prescription.</p>
+
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label for="pastday">Day</label>
+                  <input class="form-control" id="pastday" name="past_day" type="number" pattern="[0-9]*" min="0" max="31">
+                </div>
+                <div class="form-group form-group-month">
+                  <label for="pastmonth">Month</label>
+                  <input class="form-control" id="pastmonth" name="past_month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label for="pastyear">Year</label>
+                  <input class="form-control" id="pastyear" name="past_year" type="number" pattern="[0-9]*" min="0" max="2018" >
+                </div>
+              </div>
+
+            </div>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Next">
+        </div>
+
+        <p class="navigation"><a class="cancel" href="start">Cancel</a></p>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+{% endblock %}
