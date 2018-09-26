@@ -77,3 +77,13 @@ router.get('/v3-check-handler', function (req, res) {
   res.redirect('ppc/v3/card-details');
 }
 });
+
+// REMINDERS ROUTES - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+router.get('/reminder-2-1-handler', function (req, res) {
+  if (req.query.contact==='email'){
+    res.redirect('ppc/v3/reminder-2-2');
+  }else{
+    res.redirect('ppc/v3/reminder-2-1')
+  }
+});
