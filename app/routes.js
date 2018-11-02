@@ -87,3 +87,22 @@ router.get('/reminder-2-1-handler', function (req, res) {
     res.redirect('ppc/v3/reminder-c-1')
   }
 });
+
+
+// V4 ROUTES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+router.get('/email-handler', function (req, res){
+  if(req.query.email==='Yes'){
+    res.redirect('ppc/v4/email-address');
+  }else{
+    res.redirect('ppc/v4/check')
+  }
+})
+
+router.get('/v4-check-handler', function (req, res) {
+  if (req.query.payment_type === '10 installments of £10.40 by Direct Debit'){
+  res.redirect('ppc/v4/ddpay');
+} else{
+  res.redirect('ppc/v4/card-details');
+}
+});
