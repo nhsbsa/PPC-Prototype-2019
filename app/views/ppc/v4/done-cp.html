@@ -17,7 +17,7 @@
       <div class="done-panel">
         <h1 class="heading-large"><span id="done-tick"> </span>Done</h1>
         <div id="oneoff_done">
-        <h2 class="heading-medium">You have prepaid for {{ data.duration }} months of prescriptions.</h2>
+        <h2 class="heading-medium"><p id="donestatement"></p></h2>
       </div>
       </div>
 
@@ -78,5 +78,26 @@
 
 
 </main>
+
+
+<script>
+  if ("{{ data.ppc_type }}" === "12 dd") {
+    document.getElementById("duration").innerHTML = "12 months";
+    document.getElementById("total-cost").innerHTML = "£104";
+    document.getElementById("paymenttype").innerHTML = "10 instalments of £10.40 by Direct Debit";
+  } else if ("{{ data.payment_type }}" === "Card payment 12") {
+    document.getElementById("duration").innerHTML = "12 months";
+    document.getElementById("total-cost").innerHTML = "£104";
+    document.getElementById("paymenttype").innerHTML = "Card payment";
+    document.getElementById("donestatement").innerHTML = "You have prepaid for 12 months of prescriptions.";
+  } else if ("{{ data.payment_type }}" === "Card payment 3") {
+    document.getElementById("duration").innerHTML = "3 months";
+    document.getElementById("total-cost").innerHTML = "£29.10";
+    document.getElementById("paymenttype").innerHTML = "Card payment";
+    document.getElementById("donestatement").innerHTML = "You have prepaid for 3 months of prescriptions.";
+  } else {
+    document.getElementById("duration").innerHTML = " ";
+  }
+</script>
 
 {% endblock %}

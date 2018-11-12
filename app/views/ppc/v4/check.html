@@ -65,7 +65,7 @@ Check your answers - Buy an NHS Prescription Prepayment Certificate
                   <table id="review-table-two" class="check-table">
                <tr>
                   <td width="35%"><span class="strong">Length</span></td>
-                  <td> {{ data.duration }} months</td>
+                <td id="duration"></td>
                   <td width="8%"><a href="duration">Change</a></td>
                </tr>
                <tr>
@@ -80,12 +80,12 @@ Check your answers - Buy an NHS Prescription Prepayment Certificate
                </tr>
                <tr>
                   <td><span class="strong">Total cost</span></td>
-                  <td>{{ data.total_cost }}</td>
+                  <td id="total-cost"></td>
                   <td><a href="duration"></a></td>
                </tr>
                <tr>
                   <td><span class="strong">Payment method</span></td>
-                  <td id="method">{{ data.payment_type }}</td>
+                  <td id="paymenttype"></td>
                   <td><a href="duration">Change</a></td>
                </tr>
             </table>
@@ -108,4 +108,24 @@ Check your answers - Buy an NHS Prescription Prepayment Certificate
       </div>
    </div>
 </main>
+
+<script>
+  if ("{{ data.ppc_type }}" === "12 dd") {
+    document.getElementById("duration").innerHTML = "12 months";
+    document.getElementById("total-cost").innerHTML = "£104";
+    document.getElementById("paymenttype").innerHTML = "10 instalments of £10.40 by Direct Debit";
+  } else if ("{{ data.payment_type }}" === "Card payment 12") {
+    document.getElementById("duration").innerHTML = "12 months";
+    document.getElementById("total-cost").innerHTML = "£104";
+    document.getElementById("paymenttype").innerHTML = "Card payment";
+    document.getElementById("donestatement").innerHTML = "You have prepaid for 12 months of prescriptions.";
+  } else if ("{{ data.payment_type }}" === "Card payment 3") {
+    document.getElementById("duration").innerHTML = "3 months";
+    document.getElementById("total-cost").innerHTML = "£29.10";
+    document.getElementById("paymenttype").innerHTML = "Card payment";
+    document.getElementById("donestatement").innerHTML = "You have prepaid for 3 months of prescriptions.";
+  } else {
+    document.getElementById("duration").innerHTML = " ";
+  }
+</script>
 {% endblock %}
