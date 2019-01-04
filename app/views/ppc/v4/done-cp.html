@@ -17,7 +17,7 @@
       <div class="done-panel">
         <h1 class="heading-large"><span id="done-tick"> </span>Done</h1>
         <div id="oneoff_done">
-        <h2 class="heading-medium">You have prepaid for 3 months of prescriptions<p id="donestatement"></p></h2>
+        <h2 class="heading-medium">You have prepaid for 3 months of prescriptions</h2>
       </div>
       </div>
 
@@ -28,20 +28,21 @@
       <div class="info-table">
         <p>Certificate for: <span class="strong">{{ data.firstname }} {{ data.lastname }}</span></p>
         <p>Certificate number: <span class="strong">869 467 589</span></p>
-        <p>Starts on: <span class="strong">18/09/2018</span></p>
-        <p>Ends on: <span class="strong">17/09/2019</span></p>
+        <p>Starts on: <span class="strong">21/01/2019</span></p>
+        <p>Ends on: <span class="strong">20/02/2019</span></p>
       </div>
     </div>
 <div id="contact_content">
       <p>
-       We have sent the following certificate details to <span class="bold-small">{{ data.email }}</span>. You can also print this page or write down your details.
+       We have sent the following certificate details to <span class="bold-small">{{ data.email }}</span>. You can also print this page or write down your details.</p>
+       <p>You will receive a reminder by email one month before your certificate ends.</p>
       </p>
     </div>
 
-      <h2 class="heading-medium">Print this page</h2>
+      <h2 class="heading-medium">Print your certificate</h2>
 
       <ul class="list options-list">
-        <li><a class="icon print-icon" href="javascript:window.print();">Print this page</a></li>
+        <li><a class="icon print-icon" href="javascript:window.print();">Print your certificate</a></li>
         <!-- <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this page (PDF 55k)</a></li> -->
       </ul>
 
@@ -69,7 +70,7 @@
 
   <h4 class="heading-small">Contact us</h4>
   <p>
-    <a href="#">Contact us</a> if you have any queries about your prescription prepayment certificate.
+    <a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs">Contact us</a> if you have any queries about your prescription prepayment certificate.
   </p>
 
   <p id="has_dd"class="visually-hidden">{{dd}}</p>
@@ -85,12 +86,12 @@
     document.getElementById("duration").innerHTML = "12 months";
     document.getElementById("total-cost").innerHTML = "£104";
     document.getElementById("paymenttype").innerHTML = "10 instalments of £10.40 by Direct Debit";
-  } else if ("{{ data.payment_type }}" === "Card payment 12") {
+  } else if ("{{ data.ppc_type }}" === "12 card") {
     document.getElementById("duration").innerHTML = "12 months";
     document.getElementById("total-cost").innerHTML = "£104";
     document.getElementById("paymenttype").innerHTML = "Card payment";
     document.getElementById("donestatement").innerHTML = "You have prepaid for 12 months of prescriptions.";
-  } else if ("{{ data.payment_type }}" === "Card payment 3") {
+  } else if ("{{ data.ppc_type }}" === "3 card") {
     document.getElementById("duration").innerHTML = "3 months";
     document.getElementById("total-cost").innerHTML = "£29.10";
     document.getElementById("paymenttype").innerHTML = "Card payment";
