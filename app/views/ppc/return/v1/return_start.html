@@ -1,0 +1,66 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  View an NHS prescription prepayment
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+      <div class="heading-group">
+        <h1 class="heading-xlarge">Check if you pay for NHS prescriptions</h1>
+      </div>
+    </div>
+
+    <div class="column-two-thirds">
+
+      <p>You can use this service to:</p>
+        <ul class="list list-bullet">
+          <li>Check if you have a vaild NHS exemption certificate</li>
+          <li>Check if your certificate will expire within the next month</li>
+          <li>print or save your results</li>
+        </ul>
+
+        <details>
+
+  <summary><span class="summary">Type of NHS exemption certificate</span></summary>
+
+  <div class="panel panel-border-narrow">
+
+  </div>
+
+</details>
+<br>
+
+          <p class="panel panel-border-wide">This service doesn't check what benefit you're on. Only some <a href>benefits entitle you to free prescriptions</a>.</p>
+        <h2 class="heading-medium">When you don't need to check</h2>
+        <p>You're automatically entitled to free prescriptions if you are:</p>
+        <ul class="list-bullet">
+        <li>60 or over</li>
+        <li>under 16</li>
+        <li>16 to 18 and in full time education</li>
+      </ul>
+
+      <br>
+
+        <p class="button-group">
+          <a class="button button-get-started" href="return_date" id="next">
+            Start now
+          </a>
+        </p>
+          <p>It should take less than 1 minute to complete.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}
