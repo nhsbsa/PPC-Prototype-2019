@@ -5,74 +5,116 @@
   You have prepaid for NHS prescription
   {% endblock %}
 
+
 {% block content %}
+<header>
+<style>
+
+.blue-box {
+    position: relative;
+    overflow: hidden;
+    margin-right: 2%;
+    border: 8px solid #005EB8;
+    margin-bottom: 0.78947em;
+    margin-top: 15px;
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    padding: 20px 7px 20px 7px;
+}
+
+.example {
+    position: relative;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    margin-right: 2%;
+    border: 10px solid #dee0e2;
+    margin-bottom: 0.78947em;
+    margin-top: 15px;
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+.panel {
+  box-sizing: border-box;
+  clear: both;
+  border-left-style: solid;
+  border-color: #bfc1c3;
+  padding: 0.2em 0.7em;
+  margin-bottom: 0.78947em;
+}
+
+h2.govuk-heading-s {
+	font-size: 22px;
+	margin-bottom: 0.6em;
+	margin-top: 0.6em;
+}
+
+.panel-border-wide {
+  border-left-width: 10px;
+}
+
+.panel-border-wide.alert-default {
+  border-color: #2b8cc4;
+  background-color: #dbeff9;
+}
+
+.panel-border-wide.alert-success {
+  border-color: #28a197;
+  background-color: #c6ece9;
+}
+
+.panel-border-wide.alert-error {
+  border-color: #c42b2b;
+  background-color: #f3dede;
+}
+</style>
+</header>
 
 <main id="content" role="main">
-  {% include "includes/phase_banner_beta.html" %}
+   {% include "includes/phase_banner_beta.html" %}
+   <div class="grid-row">
+      <div class="column-two-thirds">
 
-
-
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <div class="text">
-
-          <div id="runout" class="blue-box">
-              <span class="visually-hidden">Warning</span>
-              <strong class="bold-small">
-                Your NHS prescription prepayment is about to run out. <a href="../ppc/duration">Buy it again</a>.
-              </strong>
-         </div>
-         <div class="example">
-          <h2 class="bold-large">Your NHS Prescription Prepayment Certificate</h2>
-          <br>
-        <div class="info-table">
-              <p>Exempt from paying: <span class="strong">Prescriptions</span></p>
-              <p>Prepayment for: <span class="strong">Jane Doe</span></p>
-              <p>Prepayment number: <span class="strong">869 467 589</span></p>
-              <p>Started on: <span class="strong">{{startdate}}</span></p>
-              <p>Ends on:  <span class="strong">18 December 2017</span></p>
-        </div>
-    </div>
-    <h2 class="heading-large">Collecting prescriptions</h2>
-  <p>Tick box 'F' on the back of your prescription.</p>
-
-<p>Pharmacy staff ask for prepayment details. If you do not have them with you, they tick 'Evidence not seen' on the prescription. They will not charge you.</p>
-
-<p>We prevent fraud by matching prepayment details on our database with prescriptions.</p>
-
-</p>
-    <h2 class="heading-medium">Get a copy</h2>
-    <ul class="options-list">
-          <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
-          <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this (PDF 55k)</a></li>
-          <li><a class="icon mobile-icon" href="to-handler">Send my certificate</a></li>
-        </ul>
-
-
-
-
-
-        <hr>
-
-                <h2 class="heading-large">Change or add your contact details</h2>
-                <p>
-                You need to tell us if your personal details change, so you do not get a fine. You can also change or add new contact details.
-                </p>
-                <p>You need to answer two security questions about how you prepay before you can edit your details.</p>
-                <p><a href="../change/securityquestion/howdidyoubuy">Change or add to your details</a></p>
-                <!-- <h2 class="heading-large">Opting out or deleting contact preferences</h2>
-                <p>You can request to  <a href="http://bit.ly/2jPn3B1">opt out of receiving texts or emails</a>.</p>
-                <p>You can also request to have your mobile number and email address <a href="http://bit.ly/2jPn3B1">removed from our records</a>.​</p> -->
-
-              <hr>
-          <h2 class="heading-large">Help to pay other NHS costs</h2>
-          <p>Answer a few more questions to check if you could get <a href="">help to pay other NHS costs</a>.
-        </p>
-        <a href="return_date" class="link-back">Check again</a>
-  </div>
+         <div id="runout" class="blue-box">
+                       <span class="visually-hidden">Warning</span>
+                       <strong class="bold-small">
+                         Your NHS prescription prepayment is about to run out. <a href="../ppc/duration">Buy it again</a>.
+                       </strong>
+                  </div>
+      <div class="example">
+     <h2 class="bold-large">Your NHS Prescription Prepayment Certificate</h2>
+     <br>
+   <div class="info-table">
+         <p>Exempt from paying: <span class="strong">Prescriptions</span></p>
+         <p>Prepayment for: <span class="strong">Jane Doe</span></p>
+         <p>Prepayment number: <span class="strong">869 467 589</span></p>
+         <p>Started on: <span class="strong">29 December 2019</span></p>
+         <p>Ends on:  <span class="strong">28 March 2019</span></p>
+   </div>
 </div>
+         <h2 class="heading-medium">Print your certificate</h2>
+         <ul class="options-list">
+            <li><a class="icon print-icon" href="javascript:window.print();">Print certificate</a></li>
+         </ul>
+         <h2 class="heading-medium">Collecting prescriptions</h2>
+         <p>Tick box 'F' on the back of your prescription.</p>
+         <p>Pharmacy staff ask for prepayment details. If you do not have them with you, they tick 'Evidence not seen' on the prescription. They will not charge you.</p>
+         <p>We prevent fraud by matching prepayment details on our database with prescriptions.</p>
+         </p>
 
 
+
+         <a href="return-date" class="link-back">Check again</a>
+      </div>
+   </div>
 </main>
+
 
 {% endblock %}
