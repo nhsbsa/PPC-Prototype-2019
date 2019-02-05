@@ -41,28 +41,24 @@
         <li>end date</li>
       </ul>
     </p>
-    <div class="panel panel-border-wide">
-
-<p>If you get your certificate sent by email, we'll send a reminder one month before it's due to end.</p>
-</div>
+  
     <form class="form" action="/email-handler" id="contact-boxes">
 
 <div class="form-group">
-      <div class="multiple-choice" data-target="contactme_details">
+      <div class="multiple-choice" data-target="email-reminder">
         <input id="contactme" type="radio" name="email" value="Yes">
         <label for="contactme">Email my certificate details</label>
       </div>
-</div>
-  <p>or</p>
+      <div class="panel panel-border-narrow js-hidden" id="email-reminder">
+      <p>We’ll send you a reminder by email one month before your certificate expires.<span class="strong"></span></p>
+    </div>
 
-
-<div class="form-group">
-  <div class="multiple-choice" data-target="no-reminder">
+  <div class="multiple-choice" data-target="post-reminder">
     <input id="nocontact" type="radio" name="email" value="No">
     <label for="nocontact">I will print my certificate details at the end of the service</label>
   </div>
-<div class="panel panel-border-narrow js-hidden" id="no-reminder">
-</p>You will not get a reminder that your certificate is due to end if you choose to write down your details.<span class="strong"></span></p>
+<div class="panel panel-border-narrow js-hidden" id="post-reminder">
+<p>We’ll send you a reminder by post one month before your certificate expires.<span class="strong"></span></p>
   </div>
 </div>
 
