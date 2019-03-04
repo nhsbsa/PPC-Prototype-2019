@@ -7,80 +7,63 @@
 {% block content %}
 
 <main id="content" role="main">
-  {% include "includes/phase_banner_beta.html" %}
+   {% include "includes/phase_banner_beta.html" %}
+   <div class="grid-row">
+      <div class="column-two-thirds">
 
-  <div class="grid-row">
+         <div class="heading-group">
+            <p>Buy an NHS Prescription Prepayment Certificate </p>
+            <h1 class="heading-large">Select your address</h1>
+         </div>
 
-    <div class="column-two-thirds">
+         <p class="bold-medium">5 addresses found for NE15 8NY</p>
 
-      <!-- <p class="navigation"><a class="back-to-previous">Back</a></p> -->
+         <div class="form-group">
+            <div class="multiple-choice">
+               <input id="address-1" type="radio" name="address_1">
+               <label for="address-1">STELLA HOUSE, NEWCASTLE UPON TYNE, NE15 8NY</label>
+            </div>
+            <div class="multiple-choice">
+               <input id="address-2" type="radio" name="address_2">
+               <label for="address-2">NHS AMBULANCE SERVICE, NEWCASTLE UPON TYNE, NE15 8NY</label>
+            </div>
+            <div class="multiple-choice">
+               <input id="address-3" type="radio" name="address_3">
+               <label for="address-3">UNIT 1, NEWCASTLE UPON TYNE, NE15 8NY</label>
+            </div>
+            <div class="multiple-choice">
+               <input id="address-4" type="radio" name="address_4">
+               <label for="address-4">UNIT 2, NEWCASTLE UPON TYNE, NE15 8NY</label>
+            </div>
+            <div class="multiple-choice">
+               <input id="address-5" type="radio" name="address_5">
+               <label for="address-5">UNIT 3, NEWCASTLE UPON TYNE, NE15 8NY</label>
+            </div>
+         </div>
 
-      <div class="heading-group">
-        <p>Buy an NHS Prescription Prepayment Certificate </p>
-        <h1 class="heading-large">Select your address</h1>
-      </div>
+         <div class="form-group">
+            <p><a href="manual-address">My address is not listed</a></p>
+         </div>
 
-      <p class="bold-medium">5 addresses found for NE15 8NY</p>
-
-      <div class="form-group">
-
-               <div class="multiple-choice">
-                 <input id="123" type="radio" name="123">
-                 <label for="123">STELLA HOUSE, NEWCASTLE UPON TYNE, NE15 8NY</label>
-               </div>
-
-               <div class="multiple-choice">
-                 <input id="123" type="radio" name="123">
-                 <label for="123">NHS AMBULANCE SERVICE, NEWCASTLE UPON TYNE, NE15 8NY</label>
-               </div>
-
-               <div class="multiple-choice">
-                 <input id="123" type="radio" name="123">
-                 <label for="123">UNIT 1, NEWCASTLE UPON TYNE, NE15 8NY</label>
-               </div>
-               <div class="multiple-choice">
-                 <input id="123" type="radio" name="123">
-                 <label for="123">UNIT 2, NEWCASTLE UPON TYNE, NE15 8NY</label>
-               </div>
-               <div class="multiple-choice">
-                 <input id="123" type="radio" name="123">
-                 <label for="123">UNIT 3, NEWCASTLE UPON TYNE, NE15 8NY</label>
-               </div>
-             </div>
-<div class="form-group">
-               <p><a href="manual-address">My address is not listed</a></p>
-             </div>
-
-             <form action="nhsno" method="get" class="form">
-
-             <div class="form-group">
+         <form action="nhsno" method="get" class="form">
+            <div class="form-group">
                <input class="form-control" id="lineone" name="lineone" type="hidden" value="STELLA HOUSE">
-             </div>
-
-             <div class="form-group">
+            </div>
+            <div class="form-group">
                <input class="form-control" id="linetwo" name="linetwo" type="hidden">
-             </div>
-
-             <div class="form-group">
+            </div>
+            <div class="form-group">
                <input class="form-control" id="town" name="town" type="hidden" value="NEWCASTLE UPON TYNE">
-             </div>
-
-             <div class="form-group">
+            </div>
+            <div class="form-group">
                <input class="form-control" name="postcode" id="postcode" value="NE15 8NY" type="hidden" required>
-             </div>
-
-             <div class="form-group">
+            </div>
+            <div class="form-group">
                <input class="button" type="submit"  value="Next">
-             </div>
-
-
-
-      </form>
-
-    </div>
-
-  </div>
-
+            </div>
+         </form>
+         
+      </div>
+   </div>
 </main>
-
 {% endblock %}

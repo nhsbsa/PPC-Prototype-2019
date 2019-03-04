@@ -7,38 +7,28 @@ What is your mobile telephone number? - Buy an NHS Prescription Prepayment Certi
 {% block content %}
 
 <main id="content" role="main">
-  {% include "includes/phase_banner_beta.html" %}
-
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
-  <!-- <p class="navigation"><a class="back-to-previous">Back</a></p> -->
-
-  <div class="heading-group">
-    <p>Buy an NHS Prescription Prepayment Certificate </p>
-    <h1 class="heading-large">What is your mobile telephone number?</h1>
-  </div>
-
-  <form action="mobile-c-handler" method="get" class="form">
-
-    <div class="form-item-wrapper">
-
-      <div class="form-group">
-        <input type="text" id="mobile" name="mobile" value="{{mobilenumber}}" class="form-control">
+   {% include "includes/phase_banner_beta.html" %}
+   <div class="grid-row">
+      <div class="column-two-thirds">
+         <div class="heading-group">
+            <p>Buy an NHS Prescription Prepayment Certificate </p>
+            <h1 class="heading-large">What is your mobile telephone number?</h1>
+         </div>
+         <form action="mobile-c-handler" method="get" class="form">
+            <div class="form-item-wrapper">
+               <div class="form-group">
+                  <input type="text" id="mobile" name="mobile" value="{{mobilenumber}}" class="form-control">
+               </div>
+            </div>
+            <div class="form-item-wrapper">
+               <div class="form-group">
+                  <input class="button" type="submit" value="Next">
+               </div>
+            </div>
+            <p class="navigation"><a class="cancel" href="start">Cancel</a></p>
+         </form>
       </div>
-    </div>
-
-    <div class="form-item-wrapper">
-      <div class="form-group">
-        <input class="button" type="submit" value="Next">
-      </div>
-    </div>
-
-    <p class="navigation"><a class="cancel" href="start">Cancel</a></p>
-
-  </form>
-    </div>
-    </div>
+   </div>
 </main>
 
 {% endblock %}

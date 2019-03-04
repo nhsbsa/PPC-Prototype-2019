@@ -7,61 +7,44 @@ NHS Prescription Prepayment Certificate
 {% block content %}
 
 <main id="content" role="main">
-  {% include "includes/phase_banner_beta.html" %}
-
-  <div class="grid-row">
-
-    <div class="column-two-thirds">
-
-      <div class="heading-group">
-        <p>Buy an NHS Prescription Prepayment Certificate </p>
-        <h1 class="heading-large">Would you like to receive an email reminder?</h1>
+   {% include "includes/phase_banner_beta.html" %}
+   <div class="grid-row">
+      <div class="column-two-thirds">
+         <div class="heading-group">
+            <p>Buy an NHS Prescription Prepayment Certificate </p>
+            <h1 class="heading-large">Would you like to receive an email reminder?</h1>
+         </div>
+         <p>We can send you an email reminder a month before your Prescription Prepayment Certificate is going
+            to end.
+         </p>
+         <form action="#" method="get" class="form">
+            <div class="form-group">
+               <fieldset class="inline">
+                  <legend class="visually-hidden">
+                     Would you like to receive an email reminder?
+                  </legend>
+                  <div class="multiple-choice" data-target="getemail">
+                     <input id="yes" type="radio" name="hasnhsno" value="Yes">
+                     <label for="yes">Yes</label>
+                  </div>
+                  <div class="multiple-choice">
+                     <input id="no" type="radio" name="hasnhsno" value="No">
+                     <label for="no">No</label>
+                  </div>
+                  <!--would show if use hasn't entered their email yet-->
+                  <div class="panel panel-border-narrow js-hidden" id="getemail">
+                     <label class="form-label" for="reminderadd">Email address</label>
+                     <input class="form-control" name="reminderadd" id="reminderadd">
+                  </div>
+               </fieldset>
+            </div>
+            <div class="form-group">
+               <input class="button" type="submit"  value="Next">
+            </div>
+            <p class="navigation"><a class="cancel" href="start">Cancel</a></p>
+         </form>
       </div>
-
-      <p>We can send you an email reminder a month before your Prescription Prepayment Certificate is going
-      to end.</p>
-
-      <form action="#" method="get" class="form">
-
-
-        <div class="form-group">
-
-          <fieldset class="inline">
-            <legend class="visually-hidden">
-              Would you like to receive an email reminder?
-            </legend>
-
-            <div class="multiple-choice" data-target="getemail">
-              <input id="yes" type="radio" name="hasnhsno" value="Yes">
-              <label for="yes">Yes</label>
-            </div>
-
-            <div class="multiple-choice">
-              <input id="no" type="radio" name="hasnhsno" value="No">
-              <label for="no">No</label>
-            </div>
-<!--would show if use hasn't entered their email yet-->
-          <div class="panel panel-border-narrow js-hidden" id="getemail">
-            <label class="form-label" for="reminderadd">Email address</label>
-            <input class="form-control" name="reminderadd" id="reminderadd">
-          </div>
-        </fieldset>
-
-        </div>
-
-
-        <div class="form-group">
-          <input class="button" type="submit"  value="Next">
-        </div>
-
-        <p class="navigation"><a class="cancel" href="start">Cancel</a></p>
-
-      </form>
-
-    </div>
-
-  </div>
-
+   </div>
 </main>
 
 {% endblock %}

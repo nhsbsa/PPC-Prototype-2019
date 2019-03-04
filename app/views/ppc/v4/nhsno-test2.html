@@ -27,6 +27,34 @@ Do you know your NHS number? - Buy an NHS Prescription Prepayment Certificate
               Do you know your NHS Number?
             </legend>
 
+            <p>If you don't know your NHS Number you can still continue. Choose 'No' and click 'Next'.</p>
+
+
+                    <div class="form-group">
+                      <details>
+
+                      <summary><span class="summary">Where to find your NHS Number</span></summary>
+
+                      <div class="panel panel-border-narrow">
+
+                        <p>
+                          If you're registered with a GP, you will have a 10 digit NHS Number unique to you.
+                          It is usually on any letter or document you have received from the NHS, such as:
+                          <ul class="list list-bullet">
+                            <li>prescriptions</li>
+                            <li>test results</li>
+                            <li>appointment letters</li>
+                            <li>maternity notes</li>
+                            <li>on your NHS medical card​</li>
+                          </ul>
+                        </p>
+
+                      </div>
+
+                    </details>
+                  </div>
+
+
             <div class="multiple-choice" data-target="getnhsno">
               <input id="yes" type="radio" name="hasnhsno" value="Yes">
               <label for="yes">Yes</label>
@@ -38,36 +66,13 @@ Do you know your NHS number? - Buy an NHS Prescription Prepayment Certificate
             </div>
 
           <div class="panel panel-border-narrow js-hidden" id="getnhsno">
-            <label class="form-label" for="nhsno">NHS Number</label>
+            <label class="form-label" for="nhsno">NHS Number 
+            <span class="form-hint">For example, 3758351245</span></label>
             <input class="form-control" name="nhsno" type="nhsno" id="nhsno">
           </div>
         </fieldset>
 
         </div>
-
-        <div class="form-group">
-          <details>
-
-          <summary><span class="summary">Where to find your NHS Number</span></summary>
-
-          <div class="panel panel-border-narrow">
-
-            <p>
-              If you're registered with a GP, you will have a 10 digit NHS Number unique to you.
-              It is usually on any letter or document you have received from the NHS, such as:
-              <ul class="list list-bullet">
-                <li>prescriptions</li>
-                <li>test results</li>
-                <li>appointment letters</li>
-                <li>maternity notes</li>
-                <li>on your NHS medical card​</li>
-              </ul>
-            </p>
-
-          </div>
-
-        </details>
-      </div>
 
         <div class="form-group">
           <input class="button" type="submit"  value="Next">
