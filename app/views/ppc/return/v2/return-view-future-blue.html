@@ -1,0 +1,100 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+
+  You have prepaid for NHS prescription
+  {% endblock %}
+
+
+{% block content %}
+<header>
+<style>
+
+.panel {
+  box-sizing: border-box;
+  clear: both;
+  border-left-style: solid;
+  border-color: #bfc1c3;
+  padding: 0.2em 0.7em;
+  margin-bottom: 0.78947em;
+}
+
+h2.govuk-heading-s {
+	font-size: 22px;
+	margin-bottom: 0.6em;
+	margin-top: 0.6em;
+}
+
+.panel-border-wide {
+  border-left-width: 10px;
+}
+
+.panel-border-wide.alert-default {
+  border-color: #2b8cc4;
+  background-color: #dbeff9;
+}
+
+.panel-border-wide.alert-success {
+  border-color: #28a197;
+  background-color: #c6ece9;
+}
+
+.panel-border-wide.alert-error {
+  border-color: #c42b2b;
+  background-color: #f3dede;
+}
+</style>
+</header>
+
+<main id="content" role="main">
+   {% include "includes/phase_banner_beta.html" %}
+   <div class="grid-row">
+      <div class="column-two-thirds">
+         <h2 class="heading-xlarge">Your Prescription Prepayment Certificate</h2>
+         <div class="form-group">
+           <div class="panel panel-border-wide alert-default">
+            <div class="notice">
+
+
+       <h2 class="heading-small">Your prepayment certificate runs out on 21 January 2019.</h2>
+           <a href="">    <p>Buy a new certificate here.</p></a>
+
+           </div>
+         </div>
+         </div>
+         <h3 class="heading-medium">Your certificate details</h3>
+
+         <div class="info-table">
+            <p>Exempt from paying: <span class="strong">Prescriptions</span></p>
+            <p>Prepayment for: <span class="strong">Jane Doe</span></p>
+            <p>Prepayment number: <span class="strong">869 467 589</span></p>
+            <p>Started on: <span class="strong">22 October 2019</span></p>
+            <p>Ends on:  <span class="strong">21 January 2019</span></p>
+         </div>
+
+         <h2 class="heading-medium">Print your certificate</h2>
+         <ul class="options-list">
+            <li><a class="icon print-icon" href="javascript:window.print();">Print certificate</a></li>
+         </ul>
+         <h2 class="heading-medium">Collecting prescriptions</h2>
+         <p>Tick box 'F' on the back of your prescription.</p>
+         <p>Pharmacy staff ask for prepayment details. If you do not have them with you, they tick 'Evidence not seen' on the prescription. They will not charge you.</p>
+         <p>We prevent fraud by matching prepayment details on our database with prescriptions.</p>
+
+
+         <h2 class="heading-medium">Contact us</h2>
+         <p><a href="">Contact us</a> if you have any queries about your prescription prepayment certificate.</p>
+
+
+<h2 class="heading-medium">Feedback</h2>
+<p><a href="">What did you think of this service?</a> (Takes 30 seconds)</p>
+
+
+         <a href="return_date" class="link-back">Check again</a>
+      </div>
+
+   </div>
+</main>
+
+
+{% endblock %}

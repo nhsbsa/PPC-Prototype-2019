@@ -43,6 +43,20 @@ h2.govuk-heading-s {
   border-color: #c42b2b;
   background-color: #f3dede;
 }
+
+.example {
+    position: relative;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    margin-right: 2%;
+    border: 10px solid #dee0e2;
+    margin-bottom: 0.78947em;
+    margin-top: 15px;
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
 </style>
 </header>
 
@@ -51,20 +65,20 @@ h2.govuk-heading-s {
    <div class="grid-row">
       <div class="column-two-thirds">
          <h2 class="heading-xlarge">Your Prescription Prepayment Certificate</h2>
-         <p>You currently have a valid Prescription Prepayment Certificate.
+         <div class="form-group">
+           <div class="panel panel-border-wide alert-error">
+            <div class="notice">
+
+
+       <h2 class="heading-small">Your prepayment certificate runs out on 21 January 2019.</h2>
+           <a href="">    <p>Buy a new certificate here.</p></a>
+
+           </div>
+         </div>
+         </div>
+
          <h3 class="heading-medium">Your certificate details</h3>
-      <div class="form-group">
-        <div class="panel panel-border-wide alert-error">
-         <div class="notice">
-       <i class="icon icon-important">
-         <span class="visually-hidden">Warning</span>
-       </i>
-       <strong class="bold-small">  <h2 class="heading-small">Your prepayment certificate runs out on 21 January 2019.</h2>
-            <p>Buy a new certificate here.</p>
-          </strong>
-        </div>
-      </div>
-      </div>
+
          <div class="info-table">
             <p>Exempt from paying: <span class="strong">Prescriptions</span></p>
             <p>Prepayment for: <span class="strong">Jane Doe</span></p>
@@ -72,6 +86,7 @@ h2.govuk-heading-s {
             <p>Started on: <span class="strong">22 October 2019</span></p>
             <p>Ends on:  <span class="strong">21 January 2019</span></p>
          </div>
+  
          <h2 class="heading-medium">Print your certificate</h2>
          <ul class="options-list">
             <li><a class="icon print-icon" href="javascript:window.print();">Print certificate</a></li>
