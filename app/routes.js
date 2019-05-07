@@ -100,7 +100,7 @@ router.get('/email-handler', function (req, res){
 })
 
 router.get('/v4-check-handler', function (req, res) {
-  if (req.query.payment_type === '10 installments of £10.40 by Direct Debit'){
+  if (req.query.paymenttype === '10 instalments of £10.40 by Direct Debit'){
   res.redirect('ppc/v4/ddpay');
 } else{
   res.redirect('ppc/v4/card-details');
