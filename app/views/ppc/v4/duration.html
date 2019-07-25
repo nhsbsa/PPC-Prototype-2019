@@ -35,7 +35,24 @@ How long do you want your prepayment certificate to last? - Buy an NHS Prescript
                </div>
                <div class="panel panel-border-narrow js-hidden" id="dd-info">
                   <p>
-                     Your first instalment will be taken on 8 May 2019. After that you can call us to change the payment date.
+                     Your first instalment will be taken on 
+                     <script>
+                           var today = new Date();
+                           var dd = today.getDate();
+                           var mm = today.getMonth() + 2; //January is 0!
+                           var yyyy = today.getFullYear();
+             
+                           if (dd < 10) {
+                             dd = '0' + dd
+                           }
+             
+                           if (mm < 10) {
+                             mm = '0' + mm
+                           }
+             
+                           today = 10 + '/' + mm + '/' + yyyy;
+                           document.write(today);
+                         </script>. After that you can call us to change the payment date.
                   </p>
                   <p>
                      Your prepayment will automatically renew in 12 months.

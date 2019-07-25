@@ -106,3 +106,15 @@ router.get('/v4-check-handler', function (req, res) {
   res.redirect('ppc/v4/card-details');
 }
 });
+
+router.get('v4-cardpayment-handler', function (req, res) {
+  if (req.query.paymenttype === '10 instalments of £10.40 by Direct Debit'){
+  res.redirect('ppc/v4/ddpay');
+} else if (req.query.paymenttype === 'Card Payment 12') {
+  res.redirect('https://products.payments.service.gov.uk/pay/c99b65dbad0d4534ba85195185c88ba4');
+} else if (req.query.paymenttype === 'Card Payment 3') {
+  res.redirect('https://products.payments.service.gov.uk/pay/c7e306307fd142ae90c856b0302cb4e2');
+} else {
+  res.redirect('check');
+}
+});
