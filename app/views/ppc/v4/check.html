@@ -93,15 +93,22 @@ Check your answers - Buy an NHS Prescription Prepayment Certificate
 
 
             <div class="form-group">
-            {% if data['ppc_type'] == "12 dd" %}
-            <a href="ddpay"><input class="button" type="submit" value="Next"></a>
-            {% endif %}
-            {% if data['ppc_type'] == "12 card" %}
-            <a href="https://products.payments.service.gov.uk/pay/6a3b4d99d79047438db1837352d0e23c"><input class="button" type="submit" value="Next"></a>
-            {% endif %}
-            {% if data['ppc_type'] == "3 card" %}
-            <a href="https://products.payments.service.gov.uk/pay/0c7eafcaa5504d7c935e0964c7309e9f"><input class="button" type="submit" value="Next"></a>
-            {% endif %}
+              {% if (data['ppc_type'] == "12 card") and (data['email'] !== "No") %}
+                  <a href="https://products.payments.service.gov.uk/pay/003f769a13cb4c528a4e6f80d56302e4"><input class="button" type="submit" value="Next"></a>
+              {% endif %}
+
+              {% if (data['ppc_type'] == "12 card") and (data['email'] == "No") %}
+                  <a href="https://products.payments.service.gov.uk/pay/d62ec1b6b13c4c8a8f2aa6c9633b8dc1"><input class="button" type="submit" value="Next"></a>
+              {% endif %}
+  
+  
+              {% if (data['ppc_type'] == "3 card") and (data['email'] !== "No")  %}
+              <a href="https://products.payments.service.gov.uk/pay/21a91843839e4c77adf7e7a79db611f3"><input class="button" type="submit" value="Next"></a>
+              {% endif %}
+  
+              {% if (data['ppc_type'] == "3 card") and (data['email'] == "No") %}
+              <a href="https://products.payments.service.gov.uk/pay/8b62a59789104ffe915eb713c1f752d4"><input class="button" type="submit" value="Next"></a>
+              {% endif %}
             </div>
                
                 
