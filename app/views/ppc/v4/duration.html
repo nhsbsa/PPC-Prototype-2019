@@ -29,41 +29,50 @@ How long do you want your prepayment certificate to last? - Buy an NHS Prescript
                <div class="multiple-choice" data-target="dd-info">
                   <input type="radio" id="twelve-dd" value="12 dd" name="ppc_type">
                   <label class="form-control-radio" for="twelve-dd">
-                  Direct Debit<br>
-                  10 instalments of <span class="strong">£10.40</span> (£104 total)
+                     <p style="
+                        margin-bottom: 7px;
+                    ">
+                        Direct Debit<br>
+                        10 instalments of <span class="strong">£10.40</span> (£104 total)
+                     </p>
                   </label>
                </div>
                <div class="panel panel-border-narrow js-hidden" id="dd-info">
                   <p>
-                     Your first instalment will be taken on 
+                     Your first instalment will be taken on
                      <script>
-                           var today = new Date();
-                           var dd = today.getDate();
-                           var mm = today.getMonth() + 2; //January is 0!
-                           var yyyy = today.getFullYear();
-             
-                           if (dd < 10) {
-                             dd = '0' + dd
-                           }
-             
-                           if (mm < 10) {
-                             mm = '0' + mm
-                           }
-             
-                           today = 10 + '/' + mm + '/' + yyyy;
-                           document.write(today);
-                         </script>. After that you can call us to change the payment date.
+                        var today = new Date();
+                        var dd = today.getDate();
+                        var mm = today.getMonth() + 2; //January is 0!
+                        var yyyy = today.getFullYear();
+
+                        if (dd < 10) {
+                           dd = '0' + dd
+                        }
+
+                        if (mm < 10) {
+                           mm = '0' + mm
+                        }
+
+                        today = 10 + '/' + mm + '/' + yyyy;
+                        document.write(today);
+                     </script>. After that you can call us to change the payment date.
                   </p>
-                  <p>
+                  <p style="margin-bottom: 20px;">
                      Your prepayment will automatically renew in 12 months.
                   </p>
+
                </div>
 
                <div class="multiple-choice">
                   <input type="radio" id="twelve" value="12 card" name="ppc_type">
                   <label class="form-control-radio" for="twelve">
-                  Single payment
-                  <br><span class="strong">£104 </span>
+                     <p style="
+                        margin-bottom: 7px;
+                    ">
+                        Single payment
+                        <br><span class="strong">£104 </span>
+                     </p>
                   </label>
                </div>
             </div>
@@ -76,8 +85,12 @@ How long do you want your prepayment certificate to last? - Buy an NHS Prescript
                <div class="multiple-choice">
                   <input type="radio" id="three" value="3 card" name="ppc_type">
                   <label class="form-control-radio" for="three">
-                  Single payment<br>
-                  <span class="strong">£29.10</span>
+                     <p style="
+                        margin-bottom: 7px;
+                    ">
+                        Single payment<br>
+                        <span class="strong">£29.10</span>
+                     </p>
                   </label>
                </div>
             </div>
