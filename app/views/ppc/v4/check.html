@@ -114,10 +114,9 @@ Check your answers - Buy an NHS Prescription Prepayment Certificate
 
 
          <div class="form-group">
-               {% if (data['ppc_type'] == "12 dd") %}
-               <a href="ddpay"><input
-                     class="button" type="submit" value="Proceed to payment"></a>
-               {% endif %}
+            {% if (data['ppc_type'] == "12 dd") %}
+            <a href="ddpay"><input class="button" type="submit" value="Proceed to payment"></a>
+            {% endif %}
 
             {% if (data['ppc_type'] == "12 card") and (data['email'] !== "No") %}
             <a href="https://products.payments.service.gov.uk/pay/003f769a13cb4c528a4e6f80d56302e4"><input
