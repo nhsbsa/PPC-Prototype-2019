@@ -90,6 +90,8 @@ Check your answers - Buy an NHS Prescription Prepayment Certificate
             </tr>
          </table>
          <br>
+
+         {% if (data['ppc_type'] == "12 card") or (data['ppc_type'] == "3 card") %}
          <div style="background-color: #DEE0E2; padding: 25px 25px 1px 25px; margin-top:15px;">
             <div class="notice" style="margin-bottom:25px;">
                <i class="icon icon-important">
@@ -108,9 +110,15 @@ Check your answers - Buy an NHS Prescription Prepayment Certificate
          </div>
 
          <br>
+         {% endif %}
 
 
          <div class="form-group">
+               {% if (data['ppc_type'] == "12 dd") %}
+               <a href="ddpay"><input
+                     class="button" type="submit" value="Proceed to payment"></a>
+               {% endif %}
+
             {% if (data['ppc_type'] == "12 card") and (data['email'] !== "No") %}
             <a href="https://products.payments.service.gov.uk/pay/003f769a13cb4c528a4e6f80d56302e4"><input
                   class="button" type="submit" value="Proceed to payment"></a>
