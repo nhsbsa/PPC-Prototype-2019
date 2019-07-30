@@ -14,9 +14,9 @@ When do you want your prepayment certificate to start? - Buy an NHS Prescription
     <div class="column-two-thirds">
 
       <div class="heading-group">
-      <p>Buy an NHS Prescription Prepayment Certificate </p>
+        <p>Buy an NHS Prescription Prepayment Certificate </p>
         <h1 class="heading-large">
-            When do you want your prepayment certificate to start?
+          When do you want your prepayment certificate to start?
         </h1>
       </div>
 
@@ -29,49 +29,57 @@ When do you want your prepayment certificate to start? - Buy an NHS Prescription
           <fieldset>
 
             <div class="multiple-choice" data-target="next-prescription">
-              <input id="future_date" type="radio" name="start_date_choice" value="future" >
+              <input id="future_date" type="radio" name="start_date_choice" value="future">
               <label class="single-line" for="next">To cover prescriptions I'll collect today or later</label>
             </div>
-  <div class="panel panel-border-narrow js-hidden" id="next-prescription">
-            <p>Choose the date you will collect your next prescription to get the most out of your certificate.<br><br>
-            If you already have a certificate, choose a date after this expires.</p>
+            <div class="panel panel-border-narrow js-hidden" id="next-prescription">
+              <p>Choose the date you will collect your next prescription to get the most out of your
+                certificate.<br><br>
+                If you already have a certificate, choose a date after this expires.</p>
               <div class="form-date">
                 <div class="form-group form-group-day">
                   <label for="futureday">Day</label>
-                  <input class="form-control" id="futureday" name="future_day" type="number" pattern="[0-9]*" min="0" max="31" >
+                  <input class="form-control" id="futureday" name="future_day" type="number" pattern="[0-9]*" min="0"
+                    max="31">
                 </div>
                 <div class="form-group form-group-month">
                   <label for="futuremonth">Month</label>
-                  <input class="form-control" id="futuremonth" name="future_month" type="number" pattern="[0-9]*" min="0" max="12">
+                  <input class="form-control" id="futuremonth" name="future_month" type="number" pattern="[0-9]*"
+                    min="0" max="12">
                 </div>
                 <div class="form-group form-group-year">
                   <label for="futureyear">Year</label>
-                  <input class="form-control" id="futureyear" name="future_year" type="number" pattern="[0-9]*" min="0" max="2019">
+                  <input class="form-control" id="futureyear" name="future_year" type="number" pattern="[0-9]*" min="0"
+                    max="2019">
                 </div>
               </div>
             </div>
 
             <div class="multiple-choice" data-target="start_date_earlier">
               <input id="past_date" type="radio" name="start_date_choice" value="past">
-              <label class="single-line" for="already">I want to backdate my certificate - I have collected my prescription before today</label>
+              <label class="single-line" for="already">I want to backdate my certificate - I have collected my
+                prescription before today</label>
             </div>
 
             <div class="panel panel-border-narrow js-hidden" id="start_date_earlier">
               <p>Choose the date you collected your prescription.<br><br>
-              You can only claim a refund if you were given a form on the day you collected the prescription.</p>
+                You can only claim a refund if you were given a form on the day you collected the prescription.</p>
 
               <div class="form-date">
                 <div class="form-group form-group-day">
                   <label for="pastday">Day</label>
-                  <input class="form-control" id="pastday" name="past_day" type="number" pattern="[0-9]*" min="0" max="31">
+                  <input class="form-control" id="pastday" name="past_day" type="number" pattern="[0-9]*" min="0"
+                    max="31">
                 </div>
                 <div class="form-group form-group-month">
                   <label for="pastmonth">Month</label>
-                  <input class="form-control" id="pastmonth" name="past_month" type="number" pattern="[0-9]*" min="0" max="12">
+                  <input class="form-control" id="pastmonth" name="past_month" type="number" pattern="[0-9]*" min="0"
+                    max="12">
                 </div>
                 <div class="form-group form-group-year">
                   <label for="pastyear">Year</label>
-                  <input class="form-control" id="pastyear" name="past_year" type="number" pattern="[0-9]*" min="0" max="2018" >
+                  <input class="form-control" id="pastyear" name="past_year" type="number" pattern="[0-9]*" min="0"
+                    max="2018">
                 </div>
               </div>
 

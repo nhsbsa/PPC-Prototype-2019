@@ -7,263 +7,344 @@ PPC Prototypes
 {% block content %}
 
 <style>
-.versions-prod:before {
-  content: "PRIVATE BETA";
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
-  font-family: Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  background: #2360AC;
-  color: white;
-}
+  .versions-prod:before {
+    content: "PRIVATE BETA";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    background: #2360AC;
+    color: white;
+  }
 
-.versions-prod {
-  position: relative;
-  overflow: hidden;
-  border: 3px solid #2360AC;
-  margin-top: 30px;
-  margin-bottom: 35px;
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 641px) {
   .versions-prod {
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    padding-left: 30px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #2360AC;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
   }
-}
 
-.versions:before {
-  content: "RESEARCH";
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
-  font-family: Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  background: #bfc1c3;
-  color: white;
+  @media (min-width: 641px) {
+    .versions-prod {
+      padding-top: 50px;
+      padding-right: 30px;
+      padding-bottom: 20px;
+      padding-left: 30px;
+    }
+  }
 
-}
+  .versions:before {
+    content: "RESEARCH";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    background: #bfc1c3;
+    color: white;
+
+  }
 
 
-.versions-alpha {
-  position: relative;
-  overflow: hidden;
-  border: 3px solid #D53880;
-  margin-top: 30px;
-  margin-bottom: 35px;
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 641px) {
   .versions-alpha {
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    padding-left: 30px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #D53880;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
   }
-}
 
-.versions-alpha:before {
-  content: "ALPHA";
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
-  font-family: Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  background: #D53880;
-  color: white;
-}
+  @media (min-width: 641px) {
+    .versions-alpha {
+      padding-top: 50px;
+      padding-right: 30px;
+      padding-bottom: 20px;
+      padding-left: 30px;
+    }
+  }
 
-.versions {
-  position: relative;
-  overflow: hidden;
-  border: 3px solid #bfc1c3;
-  margin-top: 30px;
-  margin-bottom: 35px;
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-}
+  .versions-alpha:before {
+    content: "ALPHA";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    background: #D53880;
+    color: white;
+  }
 
-hr {
-  display: block;
-  background: #bfc1c3;
-  border: 0;
-  height: 1px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding: 0;
-}
+  .versions {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #bfc1c3;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  }
 
-
-
+  hr {
+    display: block;
+    background: #bfc1c3;
+    border: 0;
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+  }
 </style>
 
 
 <main id="content" role="main">
 
-        <h1 class="heading-xlarge"><span class="heading-secondary">Prototypes</span>
-          Prescription Prepayment Certificate
-        </h1>
+  <h1 class="heading-xlarge"><span class="heading-secondary">Prototypes</span>
+    Prescription Prepayment Certificate
+  </h1>
 
 
-<div class="grid-row">
-  <div class="column-third">
-              <h2 class="heading-medium">Full journey</h2>
-          </div>
-<div class="column-two-thirds">
-    <div class="versions">
+  <div class="grid-row">
+    <div class="column-third">
+      <h2 class="heading-medium">Full journey</h2>
+    </div>
+    <div class="column-two-thirds">
+      <div class="versions">
         <h3><span class="strong"><br>Version 4</span></h3>
         <p class="form-hint"></p>
 
-            <p>Changes:</p>
-            <ul class="list list-bullet">
-                <li>Integration with Gov.pay</li>
-            </ul>
-            <hr>
-<p>Use this card number to test a successful payment. Don’t use real card numbers.</p>
-            <div class="panel panel-border-wide">
-                <div class="info-table">
-                  <p style="font-weight: bold;">4000 0566 5566 5556</p>
-                </div>
-              </div>
-              <p>You can enter any valid value for the other details. For example, it doesn’t matter what expiry date you enter, but it must be in the future.</p>
-              <p>You can also use other card types and see errors.</p>
+        <p>Use this card number to test a successful payment.</p>
 
-
-            <a href="ppc/v4/start"><input class="button" type="submit" value="Open" ></a>
-
-        </div>
-        <div class="versions">
-         <h3><span class="strong"><br>Version 3</span></h3>
-         <p class="form-hint"></p>
-
-             <p>Changes:</p>
-             <ul class="list list-bullet">
-                 <li>Start date page format changed to two radio buttons</li>
-
-             </ul>
-             <a href="ppc/v3/start"><input class="button" type="submit" value="Open" ></a>
-
-         </div>
-         <div class="versions">
-          <h3><span class="strong"><br>Version 2</span></h3>
-          <p class="form-hint"></p>
-
-              <p>Changes:</p>
-              <ul class="list list-bullet">
-                <li>Address look up changed</li>
-              <li>PPC duration and payment type question split up</li>
-              <li>How they'll receive PPC question format changed</li>
-              </ul>
-              <a href="ppc/v2/start"><input class="button" type="submit" value="Open" ></a>
-
+        <div class="panel panel-border-wide">
+          <div class="info-table">
+            <p style="font-weight: bold;">4000 0566 5566 5556</p>
           </div>
-          <div class="versions-prod">
-           <h3><span class="strong">Version 1</span> (not currently working)</h3>
-           <p class="form-hint"></p>
+        </div>
 
-               <p>Changes:</p>
-               <ul class="list list-bullet">
-      <li>Content updated to reflect current private beta version (as of 07/08/2018)</li>
-               </ul>
-               <a href="ppc/v1/start"><input class="button" type="submit" value="Open" ></a>
-
-           </div>
-       </div>
-</div>
-       <hr>
-<div class="grid-row">
-
-       <div class="column-third">
-                   <h2 class="heading-medium">Alternate start date pages</h2>
-               </div>
-       <div class="column-two-thirds">
-
-         <details>
-  <summary><span class="summary">Validation options</span></summary>
-  <div class="panel panel-border-narrow">
+        <div class="notice" style="margin: 25px 0px;">
+          <i class="icon icon-important">
+            <span class="visually-hidden">Warning</span>
+          </i>
+          <strong class="bold-small">
+            Do not use a real card number!
+          </strong>
+        </div>
 
 
-             <p>
-               Option 1 and Option 2 show what the start date page could look like if, after entering their personal details, we determined that the user
-               had a current PPC that had not yet expired. Therefore the only dates they could pick would be future dates after the expiry of their current PPC.<br><br>
-               <span class="strong"><a href="ppc/v3/start-date-test-2">Option 1</a></span> - A simple date entry as user would only be able to forward date their new PPC.<br><br>
-               <span class="strong"><a href="ppc/v3/start-date-test-20">Option 2</a></span> - Two radio options giving the user the option to automatically start their new PPC to carry on from their current one, or to choose another date.</span>
 
-          <p>If we determined a user to not hold a current PPC they would be sent to the normal start date page (currently being that in <a href="ppc/v3/start-date-test">Version 3</a>).</p>
+        <p>You can enter any valid value for the other details. For example, it doesn’t matter what expiry date you
+          enter, but it must be in the future.</p>
 
 
+
+
+
+        <a href="ppc/v4/start"><input class="button" type="submit" value="Successful Purchase"></a>
+
+
+
+        <hr>
+
+        <p>For specific errors during the payment process, please see below:</p>
+
+        <table id="review-table-one" class="check-table">
+          <thead>
+            <tr>
+              <th>Errors</th>
+              <th>Card number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://products.payments.service.gov.uk/pay/003f769a13cb4c528a4e6f80d56302e4">Card not accepted</a></td>
+              <td>6759 6498 2643 8453</td>
+            </tr>
+            <tr>
+              <td><a href="https://products.payments.service.gov.uk/pay/003f769a13cb4c528a4e6f80d56302e4">Card declined</a></td>
+              <td>4000 0000 0000 00023</td>
+            </tr>
+            <tr>
+              <td><a href="https://products.payments.service.gov.uk/pay/003f769a13cb4c528a4e6f80d56302e4">Payment window times out</a></td>
+              <td>4000 0566 5566 5556</td>
+            </tr>
+            <tr>
+              <td><a href="https://products.payments.service.gov.uk/pay/003f769a13cb4c528a4e6f80d56302e4">User cancels payment</a></td>
+              <td>4000 0566 5566 5556</td>
+            </tr>
+            <tr>
+              <td><a href="https://products.payments.service.gov.uk/pay/003f769a13cb4c528a4e6f80d56302e4">Gov Pay card error</a></td>
+              <td>4000 0000 0000 0119</td>
+            </tr>
+            <tr>
+              <td style="border-bottom: 0;"><a href="https://products.payments.service.gov.uk/pay/003f769a13cb4c528a4e6f80d56302e4">Service down after confirming Gov
+                  Pay</a></td>
+              <td style="border-bottom: 0;">4000 0000 0000 0119</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <h4 class="heading-small">What we changed:</h4>
+        <ul class="list list-bullet">
+          <li>Switch the our payment service from CAPITA PAY 360 to GOV.PAY UK (government’s secure online payment service).</li>
+        </ul>
+
+        <h4 class="heading-small">What we plan to test:</h4>
+        <ul class="list list-bullet">
+          <li>Are users worried about being forwarded to a third-party provider which looks different to the PPC service?</li>
+        </ul>
+
+        <h4 class="heading-small">What we found:</h4>
+        <ul class="list list-bullet">
+          <li>...</li>
+        </ul>
+        <br>
+
+      </div>
+      <div class="versions">
+        <h3><span class="strong"><br>Version 3</span></h3>
+        <p class="form-hint"></p>
+
+        <p>Changes:</p>
+        <ul class="list list-bullet">
+          <li>Start date page format changed to two radio buttons</li>
+
+        </ul>
+        <a href="ppc/v3/start"><input class="button" type="submit" value="Open"></a>
+
+      </div>
+      <div class="versions">
+        <h3><span class="strong"><br>Version 2</span></h3>
+        <p class="form-hint"></p>
+
+        <p>Changes:</p>
+        <ul class="list list-bullet">
+          <li>Address look up changed</li>
+          <li>PPC duration and payment type question split up</li>
+          <li>How they'll receive PPC question format changed</li>
+        </ul>
+        <a href="ppc/v2/start"><input class="button" type="submit" value="Open"></a>
+
+      </div>
+      <div class="versions-prod">
+        <h3><span class="strong">Version 1</span> (not currently working)</h3>
+        <p class="form-hint"></p>
+
+        <p>Changes:</p>
+        <ul class="list list-bullet">
+          <li>Content updated to reflect current private beta version (as of 07/08/2018)</li>
+        </ul>
+        <a href="ppc/v1/start"><input class="button" type="submit" value="Open"></a>
+
+      </div>
+    </div>
   </div>
-</details>
+  <hr>
+  <div class="grid-row">
+
+    <div class="column-third">
+      <h2 class="heading-medium">Alternate start date pages</h2>
+    </div>
+    <div class="column-two-thirds">
 
       <details>
-<summary><span class="summary">No validation</span></summary>
-<div class="panel panel-border-narrow">
+        <summary><span class="summary">Validation options</span></summary>
+        <div class="panel panel-border-narrow">
 
-        <p>
-          Option 3 is a potential change to the start date page, which doesn't require identification of current PPC holders, but might reduce the number of overlaps.<br><br>
-<span class="strong"><a href="ppc/v3/start-date-test0">Option 3</a></span> - Same as current iteration but with an added radio where users can select that they
-          want their new certificate to carry on from their current certificate, and are prompted to enter the expiry date of their current certificate. <br><br>Their new start date would then be automatically set to the date after
-          the expiry date of their current PPC.<br><br>
-</p>
 
-</div>
-</details>
+          <p>
+            Option 1 and Option 2 show what the start date page could look like if, after entering their personal
+            details, we determined that the user
+            had a current PPC that had not yet expired. Therefore the only dates they could pick would be future dates
+            after the expiry of their current PPC.<br><br>
+            <span class="strong"><a href="ppc/v3/start-date-test-2">Option 1</a></span> - A simple date entry as user
+            would only be able to forward date their new PPC.<br><br>
+            <span class="strong"><a href="ppc/v3/start-date-test-20">Option 2</a></span> - Two radio options giving the
+            user the option to automatically start their new PPC to carry on from their current one, or to choose
+            another date.</span>
 
-</div>
-</div>
-<hr>
+            <p>If we determined a user to not hold a current PPC they would be sent to the normal start date page
+              (currently being that in <a href="ppc/v3/start-date-test">Version 3</a>).</p>
 
-<div class="grid-row">
 
-     <div class="column-third">
-                   <h2 class="heading-medium">Reminders</h2>
-               </div>
-       <div class="column-two-thirds">
-         <ul class="list list-bullet">
-           <li><a href="ppc/v3/reminder-a-1">Option 1</a></li>
-           <p><br>Users are informed on 'How would you like to receive your certificate?' page that if they select email they will also receive
-              an email reminder. Users who select to write their details down are reminded this means they won't get a reminder.
-           <li><a href="ppc/v3/reminder-b-1">Option 2</a></li>
-           <p><br>All users would get option of a reminder as a separate question (if card payment 3 or 12 months). If they had not yet entered their email for receiving their PPC the email input
-             field would show when selecting 'yes' to reminders.</p>
-           <li><a href="ppc/v3/reminder-c-1">Option 3</a></li>
-<p><br>Users who choose to receive their certificate by email are given the option in a separate question of whether they would like a reminder.
-  Users who are going to select to write their details down are informed this means they won't be able to receive a reminder.</p>
-         </ul>
-      </div>
+        </div>
+      </details>
 
-</div>
+      <details>
+        <summary><span class="summary">No validation</span></summary>
+        <div class="panel panel-border-narrow">
 
-<hr>
-<div class="grid-row">
-<div class="form-group">
-  <a href="ppc/change-log"><br><br><span class="heading-medium">Detailed change log</span></a>
-</div>
+          <p>
+            Option 3 is a potential change to the start date page, which doesn't require identification of current PPC
+            holders, but might reduce the number of overlaps.<br><br>
+            <span class="strong"><a href="ppc/v3/start-date-test0">Option 3</a></span> - Same as current iteration but
+            with an added radio where users can select that they
+            want their new certificate to carry on from their current certificate, and are prompted to enter the expiry
+            date of their current certificate. <br><br>Their new start date would then be automatically set to the date
+            after
+            the expiry date of their current PPC.<br><br>
+          </p>
+
+        </div>
+      </details>
+
+    </div>
+  </div>
+  <hr>
+
+  <div class="grid-row">
+
+    <div class="column-third">
+      <h2 class="heading-medium">Reminders</h2>
+    </div>
+    <div class="column-two-thirds">
+      <ul class="list list-bullet">
+        <li><a href="ppc/v3/reminder-a-1">Option 1</a></li>
+        <p><br>Users are informed on 'How would you like to receive your certificate?' page that if they select email
+          they will also receive
+          an email reminder. Users who select to write their details down are reminded this means they won't get a
+          reminder.
+          <li><a href="ppc/v3/reminder-b-1">Option 2</a></li>
+          <p><br>All users would get option of a reminder as a separate question (if card payment 3 or 12 months). If
+            they had not yet entered their email for receiving their PPC the email input
+            field would show when selecting 'yes' to reminders.</p>
+          <li><a href="ppc/v3/reminder-c-1">Option 3</a></li>
+          <p><br>Users who choose to receive their certificate by email are given the option in a separate question of
+            whether they would like a reminder.
+            Users who are going to select to write their details down are informed this means they won't be able to
+            receive a reminder.</p>
+      </ul>
+    </div>
+
+  </div>
+
+  <hr>
+  <div class="grid-row">
+    <div class="form-group">
+      <a href="ppc/change-log"><br><br><span class="heading-medium">Detailed change log</span></a>
+    </div>
 
 
 
