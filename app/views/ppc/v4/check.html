@@ -37,11 +37,14 @@ Check your answers - Buy an NHS Prescription Prepayment Certificate
                <td><a href="nhsno">Change</a></td>
             </tr>
 
+            {% if (data['hasnhsno'] == "Yes") %}
             <tr id="nhsno">
-               <td><span class="strong">NHS Number</span></td>
-               <td>{{ data.nhsno }}</td>
-               <td><a href="nhsno">Change</a></td>
-            </tr>
+                  <td><span class="strong">NHS Number</span></td>
+                  <td>{{ data.nhsno }}</td>
+                  <td><a href="nhsno">Change</a></td>
+               </tr>
+            {% endif %}
+
             <tr>
                <td><span class="strong">Address</span></td>
                <td>{{ data.lineone }}<br>{{ data.town }}<br>{{ data.postcode }}</td>
@@ -50,14 +53,19 @@ Check your answers - Buy an NHS Prescription Prepayment Certificate
 
             <tr>
                <td><span class="strong">Get prepayment certificate and reminder by email?</span></td>
-               <td>Yes</td>
+               <td>{{ data.email }}</td>
                <td><a href="reminder-a-1">Change</a></td>
             </tr>
+
+            {% if (data['email'] == "Yes") %}
             <tr id="email-value">
-               <td><span class="strong">Email</span></td>
-               <td>{{ data.email}}</td>
-               <td><a href="copy">Change</a></td>
-            </tr>
+                  <td><span class="strong">Email</span></td>
+                  <td>{{ data.emailaddress }}</td>
+                  <td><a href="copy">Change</a></td>
+               </tr>
+            {% endif %}
+
+
             <!-- about your prepayment -->
          </table>
          <h2 class="heading-medium table-head">Your certificate</h2>
