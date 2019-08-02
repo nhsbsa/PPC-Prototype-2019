@@ -39,10 +39,10 @@ Check your answers - Buy an NHS Prescription Prepayment Certificate
 
             {% if (data['hasnhsno'] == "Yes") %}
             <tr id="nhsno">
-                  <td><span class="strong">NHS Number</span></td>
-                  <td>{{ data.nhsno }}</td>
-                  <td><a href="nhsno">Change</a></td>
-               </tr>
+               <td><span class="strong">NHS Number</span></td>
+               <td>{{ data.nhsno }}</td>
+               <td><a href="nhsno">Change</a></td>
+            </tr>
             {% endif %}
 
             <tr>
@@ -59,10 +59,10 @@ Check your answers - Buy an NHS Prescription Prepayment Certificate
 
             {% if (data['email'] == "Yes") %}
             <tr id="email-value">
-                  <td><span class="strong">Email</span></td>
-                  <td>{{ data.emailaddress }}</td>
-                  <td><a href="copy">Change</a></td>
-               </tr>
+               <td><span class="strong">Email</span></td>
+               <td>{{ data.emailaddress }}</td>
+               <td><a href="copy">Change</a></td>
+            </tr>
             {% endif %}
 
 
