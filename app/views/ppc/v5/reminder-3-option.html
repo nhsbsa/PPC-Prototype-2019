@@ -1,0 +1,81 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  Would you like your prepayment certificate sent by text and email? - Buy an NHS Prescription Prepayment Certificate
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="heading-group">
+        <p>Buy an NHS Prescription Prepayment Certificate </p>
+        <h1 class="heading-large">
+        How would you like your prepayment certificate sent?
+        </h1>
+      </div>
+
+
+      <div class="notice">
+  <i class="icon icon-information">
+    <span class="visually-hidden">Information</span>
+  </i>
+  <strong>
+    <span class="bold">We do not send out plastic cards any more because they take time to reach you.</span> They are also costly to the NHS and the environment
+  </strong>
+</div>
+<br>
+
+
+      <p>We can send your prepayment certificate straight away by email. Or, you can print it at the end of the service.
+      </p>
+
+    <p>You will get a:</p>
+      <ul class="list list-bullet">
+        <li>certificate number</li>
+        <li>start date</li>
+        <li>end date</li>
+      </ul>
+    </p>
+    <form class="form" action="/email-handler" id="contact-boxes">
+
+<div class="form-group">
+      <div class="multiple-choice" data-target="email-reminder">
+        <input id="contactme" type="radio" name="email" value="Yes">
+        <label for="contactme">Email my certificate details</label>
+          </div>
+        <div class="panel panel-border-narrow js-hidden" id="email-reminder">
+        <p>We’ll send you a reminder by email one month before your certificate expires.<span class="strong"></span></p>
+          </div>
+
+
+  <div class="multiple-choice" data-target="no-reminder">
+    <input id="nocontact" type="radio" name="email" value="No">
+    <label for="nocontact">I will print my certificate details at the end of the service</label>
+  </div>
+<div class="panel panel-border-narrow js-hidden" id="no-reminder">
+<p>Make a note of the date your certificate expires. We will not send you a reminder.<span class="strong"></span></p>
+  </div>
+</div>
+
+
+  <div class="form-group">
+    <input class="button" type="submit" value="Next">
+  </div>
+
+        <div class="form-group">
+        <p class="navigation"><a class="cancel" href="start">Cancel</a></p>
+      </div>
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

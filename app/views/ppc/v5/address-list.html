@@ -1,0 +1,84 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  What is your address? - Buy an NHS Prescription Prepayment Certificate
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <!-- <p class="navigation"><a class="back-to-previous">Back</a></p> -->
+
+      <div class="heading-group">
+        <p>Buy an NHS Prescription Prepayment Certificate </p>
+        <h1 class="heading-large">Select your address</h1>
+      </div>
+
+      <div class="form-group">
+
+               <div class="multiple-choice">
+                 <input id="1" type="radio" name="1">
+                 <label for="1"><p style="margin-bottom: 7px;">STELLA HOUSE, NEWCASTLE UPON TYNE, NE15 8NY</p></label>
+               </div>
+
+               <div class="multiple-choice">
+                 <input id="2" type="radio" name="2">
+                 <label for="2"><p style="margin-bottom: 7px;">NHS AMBULANCE SERVICE, NEWCASTLE UPON TYNE, NE15 8NY</p></label>
+               </div>
+
+               <div class="multiple-choice">
+                 <input id="3" type="radio" name="3">
+                 <label for="3"><p style="margin-bottom: 7px;">UNIT 1, NEWCASTLE UPON TYNE, NE15 8NY</p></label>
+               </div>
+               <div class="multiple-choice">
+                 <input id="4" type="radio" name="4">
+                 <label for="4"><p style="margin-bottom: 7px;">UNIT 2, NEWCASTLE UPON TYNE, NE15 8NY</p></label>
+               </div>
+               <div class="multiple-choice">
+                 <input id="5" type="radio" name="5">
+                 <label for="5"><p style="margin-bottom: 7px;">UNIT 3, NEWCASTLE UPON TYNE, NE15 8NY</p></label>
+               </div>
+             </div>
+<div class="form-group">
+               <p><a href="manual-address">Enter address manually</a></p>
+             </div>
+
+             <form action="manual-address" method="get" class="form">
+
+             <div class="form-group">
+               <input class="form-control" id="lineone" name="lineone" type="hidden" value="STELLA HOUSE">
+             </div>
+
+             <div class="form-group">
+               <input class="form-control" id="linetwo" name="linetwo" type="hidden">
+             </div>
+
+             <div class="form-group">
+               <input class="form-control" id="town" name="town" type="hidden" value="NEWCASTLE UPON TYNE">
+             </div>
+
+             <div class="form-group">
+               <input class="form-control" name="postcode" id="postcode" value="NE15 8NY" type="hidden" required>
+             </div>
+
+             <div class="form-group">
+               <input class="button" type="submit"  value="Next">
+             </div>
+
+  <p class="navigation"><a class="cancel" href="start">Cancel</a></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

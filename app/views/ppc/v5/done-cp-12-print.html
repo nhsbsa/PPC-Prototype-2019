@@ -1,0 +1,188 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+You have prepaid for 12 months of prescriptions. - Buy an NHS Prescription Prepayment Certificate
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+
+
+    <div class="column-two-thirds">
+
+      <div class="done-panel">
+        <h1 class="heading-large"><span id="done-tick"> </span>Done</h1>
+        <div id="oneoff_done">
+          <h2 class="heading-medium">You have prepaid for 12 months of prescriptions</h2>
+        </div>
+      </div>
+
+      <h3 class="heading-medium">Print your certificate details – you won’t receive a certificate in the post.</h3>
+
+      <p>If a pharmacist asks for evidence that you have prepaid, you must show them the following details:</p>
+      <div class="panel panel-border-wide">
+        <div class="info-table">
+          <p>Certificate for: <span class="strong">Sam Smith</span></p>
+          <p>Certificate number: <span class="strong">869 467 589</span></p>
+          <p>Starts on: <span class="strong">
+              <script>
+                var today = new Date();
+                var dd = today.getDate();
+
+                var month = new Array();
+                month[0] = "January";
+                month[1] = "February";
+                month[2] = "March";
+                month[3] = "April";
+                month[4] = "May";
+                month[5] = "June";
+                month[6] = "July";
+                month[7] = "August";
+                month[8] = "September";
+                month[9] = "October";
+                month[10] = "November";
+                month[11] = "December";
+
+                var mm = month[today.getMonth()]; //January is 0!
+
+
+                var yyyy = today.getFullYear();
+
+                if (dd < 10) {
+                  dd = '0' + dd
+                }
+
+                if (mm < 10) {
+                  mm = '0' + mm
+                }
+
+                today = dd + ' ' + mm + ' ' + yyyy;
+                document.write(today);
+              </script>
+            </span></p>
+          <p>Ends on: <span class="strong">
+              <script>
+                var today = new Date();
+                var dd = today.getDate();
+
+                var month = new Array();
+                month[0] = "January";
+                month[1] = "February";
+                month[2] = "March";
+                month[3] = "April";
+                month[4] = "May";
+                month[5] = "June";
+                month[6] = "July";
+                month[7] = "August";
+                month[8] = "September";
+                month[9] = "October";
+                month[10] = "November";
+                month[11] = "December";
+
+                var mm = month[today.getMonth()]; //January is 0!
+
+
+                var yyyy = today.getFullYear() + 1;
+
+                if (dd < 10) {
+                  dd = '0' + dd
+                }
+
+                if (mm < 10) {
+                  mm = '0' + mm
+                }
+
+                today = dd + ' ' + mm + ' ' + yyyy;
+                document.write(today);
+              </script>
+            </span></p>
+        </div>
+      </div>
+
+
+      <h2 class="heading-medium" style="margin-top: 0;">Print your certificate</h2>
+
+      <ul class="list options-list">
+        <li><a class="icon print-icon" href="javascript:window.print();">Print certificate</a></li>
+        <!-- <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this page (PDF 55k)</a></li> -->
+      </ul>
+
+      <h3 class="heading-medium">Collecting prescriptions</h3>
+
+      <p>
+        Tick box 'F' on the back of your prescription.
+      </p>
+
+      <p>
+        Pharmacy staff ask for prepayment details. If you do not have them with you, they tick 'Evidence not seen' on
+        the prescription. They will not charge you.
+      </p>
+
+      <p>
+        We prevent fraud by matching prepayment details on our database with prescriptions.
+      </p>
+
+
+
+      <h3 class="heading-medium">Feedback</h3>
+
+      <p><a href="feedback" target="_blank" id="finished-button">What did you think of this service?</a> (Takes 30
+        seconds)</p>
+
+      <h3 class="heading-medium">Contact us</h3>
+
+      <p>
+        <a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs">Contact us</a> if you have any queries about
+        your prescription prepayment certificate.
+      </p>
+
+      <hr>
+
+      <h4 class="heading-small">Join the NHS Organ Donor Register</h4>
+
+      <p>More than 23 million people have signed up as organ donors across the UK.</p>
+
+      <p>Anyone can sign up as a donor, your age or any existing medical conditions shouldn't stop you from joining.</p>
+
+      <p>Join today at <a
+          href="https://www.organdonation.nhs.uk/register-to-donate/register-your-details/?campaign=2499&amp;utm_source=prescription_ppc&amp;utm_medium=referral&amp;utm_content=web&amp;utm_campaign=partner"
+          target="blank" id="organ-donation-link">organdonation.nhs.uk</a> (opens in a new window).</p>
+
+      <img src="/public/images/bsa/donate.gif" alt="Organ Donation">
+
+
+
+      <p id="has_dd" class="visually-hidden">{{dd}}</p>
+      <p id="3month" class="visually-hidden">{{durtion}}</p>
+
+    </div>
+
+
+</main>
+
+
+<script>
+  if ("{{ data.ppc_type }}" === "12 dd") {
+    document.getElementById("duration").innerHTML = "12 months";
+    document.getElementById("total-cost").innerHTML = "£104";
+    document.getElementById("paymenttype").innerHTML = "10 instalments of £10.40 by Direct Debit";
+  } else if ("{{ data.ppc_type }}" === "12 card") {
+    document.getElementById("duration").innerHTML = "12 months";
+    document.getElementById("total-cost").innerHTML = "£104";
+    document.getElementById("paymenttype").innerHTML = "Card payment";
+    document.getElementById("donestatement").innerHTML = "You have prepaid for 12 months of prescriptions.";
+  } else if ("{{ data.ppc_type }}" === "3 card") {
+    document.getElementById("duration").innerHTML = "3 months";
+    document.getElementById("total-cost").innerHTML = "£29.10";
+    document.getElementById("paymenttype").innerHTML = "Card payment";
+    document.getElementById("donestatement").innerHTML = "You have prepaid for 3 months of prescriptions.";
+  } else {
+    document.getElementById("duration").innerHTML = " ";
+  }
+</script>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  Prepay for NHS prescriptions
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="heading-group">
+        <p>Buy an NHS Prescription Prepayment Certificate</p>
+          <h1 class="heading-large">Our payment provider is temporarily unavailable</h1>
+      </div>
+      <p>We're working to fix this as soon as possible.</p>
+      <p>You can try again later or pay for a 12 month prepayment certificate by Direct Debit instead.</p>
+      <p><a class="button" href="/ppc/v4/duration-dd-only">Pay by Direct Debit</a></p>
+
+      <p>
+      <details>
+        <summary><span class="summary">I do not want to pay by Direct Debit</span></summary>
+        <div class="panel panel-border-narrow">
+           <p>If you need your prescriptions now and do not want to pay by Direct Debit you can:</p>
+           <ul class="list list-bullet">
+              <li>collect and pay for your prescriptions</li>
+              <li>ask the pharmacist for an FP57 refund receipt when you pay</li>
+              <li>buy your prescription prepayment certificate</li>
+              <li>take your FP57 refund receipt to any community pharmacy, with your prescription prepayment certificate</li>
+           </ul>
+           <p>You must do this within three months of the date that you paid. The pharmacy will then refund you for your prescriptions.</p>
+        </div>
+     </details>
+    </p>
+
+
+
+      <p>If you need help, contact us:</p>
+      <div class="panel panel-border-wide">
+
+        <p><strong style="font-weight: bold;">Phone:</strong> 0300 330 1341 (this call will be charged at a local rate)
+        </p>
+        <p>Lines are open Monday to Friday 8am to 6pm, and Saturday 9am to 3pm.</p>
+        <p>Alternatively, <a
+            href="https://contactcentreservices.nhsbsa.nhs.uk/nhsuk/dispatch/connection?lang=en_GB&Screen=NHSBSA_ContactForm">use
+            our contact form</a></p>
+
+      </div>
+    </div>
+    </div>
+</main>
+
+{% endblock %}

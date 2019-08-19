@@ -1,0 +1,38 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  Prepay for NHS prescriptions
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="heading-group">
+        <p>Buy an NHS Prescription Prepayment Certificate</p>
+          <h1 class="heading-large">We could not process your details</h1>
+      </div>
+      <p>It is not your fault. Our payment provider is having technical difficulties.</p>
+      <p>You can try again later or pay for a 12 month prepayment certificate by direct debit instead.</p>
+      <p><a class="button" href="/ppc/v4/duration-dd-only">Pay by direct debit</a></p>
+      <p>If you need further assistance, contact us:</p>
+      <div class="panel panel-border-wide">
+
+        <p><strong style="font-weight:  bold;">Phone:</strong> 0300 330 1341 (this call will be charged at a local rate)
+        </p>
+        <p><strong style="font-weight:  bold;">Opening hours:</strong> Monday to Friday 8am to 6pm, and Saturday 9am to
+          3pm.</p>
+        <p>Alternatively, please <a
+            href="https://contactcentreservices.nhsbsa.nhs.uk/nhsuk/dispatch/connection?lang=en_GB&Screen=NHSBSA_ContactForm">use
+            our contact form</a></p>
+
+      </div>
+    </div>
+    </div>
+</main>
+
+{% endblock %}
