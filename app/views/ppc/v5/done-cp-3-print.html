@@ -5,25 +5,54 @@ You have prepaid for 3 months of prescriptions. - Buy an NHS Prescription Prepay
 {% endblock %}
 
 {% block content %}
-
+<style type="text/css">
+  .print {
+    display: none;
+  }
+  
+    @media print
+    {    
+        .no-print, .no-print *
+        {
+            display: none !important;
+        }
+        .print, .print *
+        {
+          display: block;
+      height: 1px;
+      background: transparent;
+      width: 100%;
+      border: none;
+      border-top: solid 1px #aaa;
+        }
+    }
+    </style>
 <main id="content" role="main">
-  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="phase-banner no-print">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
 
   <div class="grid-row">
 
 
     <div class="column-two-thirds">
 
-      <div class="done-panel">
+      <div class="done-panel no-print">
         <h1 class="heading-large"><span id="done-tick"> </span>Done</h1>
         <div id="oneoff_done">
           <h2 class="heading-medium">You have prepaid for 3 months of prescriptions</h2>
         </div>
       </div>
 
-      <h3 class="heading-medium">Print your certificate details – you won’t receive a certificate in the post.</h3>
+      <h3 class="heading-medium no-print">Print your certificate details – you won’t receive a certificate in the post.</h3>
 
       <p>If a pharmacist asks for evidence that you have prepaid, you must show them the following details:</p>
+      <hr class="print">
+
       <div class="panel panel-border-wide">
         <div class="info-table">
           <p>Certificate for: <span class="strong">Sam Smith</span></p>
@@ -108,10 +137,11 @@ You have prepaid for 3 months of prescriptions. - Buy an NHS Prescription Prepay
             </span></p>
         </div>
       </div>
+      <hr class="print">
 
-      <h2 class="heading-medium" style="margin-top: 0;">Print your certificate</h2>
+      <h2 class="heading-medium no-print" style="margin-top: 0;">Print your certificate</h2>
 
-      <ul class="list options-list">
+      <ul class="list options-list no-print">
         <li><a class="icon print-icon" href="javascript:window.print();">Print certificate</a></li>
         <!-- <li><a class="icon download-icon" href="../public/images/bsa/cert.pdf" target="_blank">Save this page (PDF 55k)</a></li> -->
       </ul>
@@ -133,9 +163,9 @@ You have prepaid for 3 months of prescriptions. - Buy an NHS Prescription Prepay
 
 
 
-      <h3 class="heading-medium">Feedback</h3>
+      <h3 class="heading-medium no-print">Feedback</h3>
 
-      <p><a href="feedback" target="_blank" id="finished-button">What did you think of this service?</a> (Takes 30
+      <p class="no-print"><a href="feedback" target="_blank" id="finished-button">What did you think of this service?</a> (Takes 30
         seconds)</p>
 
       <h3 class="heading-medium">Contact us</h3>
@@ -147,20 +177,20 @@ You have prepaid for 3 months of prescriptions. - Buy an NHS Prescription Prepay
 
       <hr>
 
-      <h4 class="heading-small">Join the NHS Organ Donor Register</h4>
+      <h4 class="heading-small no-print">Join the NHS Organ Donor Register</h4>
 
-      <p>More than 23 million people have signed up as organ donors across the UK.</p>
+      <p class="no-print">More than 23 million people have signed up as organ donors across the UK.</p>
 
-      <p>Anyone can sign up as a donor, your age or any existing medical conditions shouldn't stop you from joining.</p>
+      <p class="no-print">Anyone can sign up as a donor, your age or any existing medical conditions shouldn't stop you from joining.</p>
 
-      <p>Join today at <a
+      <p class="no-print">Join today at <a
           href="https://www.organdonation.nhs.uk/register-to-donate/register-your-details/?campaign=2499&amp;utm_source=prescription_ppc&amp;utm_medium=referral&amp;utm_content=web&amp;utm_campaign=partner"
           target="blank" id="organ-donation-link">organdonation.nhs.uk</a> (opens in a new window).</p>
 
-      <img src="/public/images/bsa/donate.gif" alt="Organ Donation">
+      <img src="/public/images/bsa/donate.gif" alt="Organ Donation" class="no-print">
 
-      <p id="has_dd" class="visually-hidden">{{dd}}</p>
-      <p id="3month" class="visually-hidden">{{durtion}}</p>
+      <p id="has_dd" class="visually-hidden no-print">{{dd}}</p>
+      <p id="3month" class="visually-hidden no-print">{{durtion}}</p>
 
 </main>
 
